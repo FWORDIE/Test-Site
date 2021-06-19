@@ -14,8 +14,21 @@ var client = new faunadb.Client({
 });
 
     })
-function key(){
-    console.log(serverURL);
-}
+
+    function GetDataBase() {
+        NoCalls ++;
+        console.log('Calls: ' + NoCalls + ", Posts: " + NoPosts)
+        client
+            .query(
+                q.Paginate(q.Match(q.Index("AllDemQuestions")))
+    
+                )
+    
+            .then((ret) => {
+                questions = ret.data;
+                console.log(questions);
+            })
+            .catch((err) => console.error("Error: %s", err));
+    }
     
 
