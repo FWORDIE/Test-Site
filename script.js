@@ -14,10 +14,10 @@ var client = new faunadb.Client({
 });
 
     })
-
+var questions;
     function GetDataBase() {
-        NoCalls ++;
-        console.log('Calls: ' + NoCalls + ", Posts: " + NoPosts)
+        //NoCalls ++;
+        //console.log('Calls: ' + NoCalls + ", Posts: " + NoPosts)
         client
             .query(
                 q.Paginate(q.Match(q.Index("AllDemQuestions")))
