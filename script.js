@@ -23,7 +23,7 @@ var questions;
         //console.log('Calls: ' + NoCalls + ", Posts: " + NoPosts)
         client
             .query(
-                q.Paginate(q.Match(q.Index("AllDemQuestions")))
+                q.Paginate(q.Match(q.Index("all_products")))
     
                 )
     
