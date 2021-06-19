@@ -1,19 +1,22 @@
-
+var faunadb;
+var q;
+var client;
 
 let serverURL;
 
     fetch(".netlify/functions/api")
     .then(response => response.json())
     .then(json => {
-        var faunadb = window.faunadb;
-var q = faunadb.query;
-var client = new faunadb.Client({
-    secret: json.api,
-    domain: "db.fauna.com",
-    scheme: "https",
-});
+        faunadb = window.faunadb;
+        q = faunadb.query;
+        client = new faunadb.Client({
+            secret: json.api,
+            domain: "db.fauna.com",
+            scheme: "https",
+        });
 
     })
+    
 var questions;
     function GetDataBase() {
         //NoCalls ++;
