@@ -106,3 +106,21 @@
     
 // }
 
+let scriptURL = '';
+
+function saveToGoogleSheet(name){
+
+    let serverURL;
+
+    fetch(".netlify/functions/api2")
+    .then(response => response.json())
+    .then(json => {
+        scriptURL = 'https://script.google.com/macros/s/AKfycbz1wufGCDRnQyBFez7-DWoLsa1mJGL-8dvEudqLltuCJFQh9I6b/exec';
+        })
+
+var sendingData = new FormData() // adjusted here
+sendingData.append('name', name)
+fetch(scriptURL, {method: 'POST', body: sendingData}) // adjusted here
+.then(response => console.log('Success!', response))
+.catch(error => console.error('Error!', error.message))
+}
