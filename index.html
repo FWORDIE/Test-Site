@@ -1,10 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="//cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb-min.js"></script>
-
-<script src="script.js"></script>
+    <meta charset="utf-8">
+    <title>Than Average</title>
+    <meta content="Than Average" name="description">
+    <meta content="Fred Wordie" name="author">
+    <link href="style/style.css" rel="stylesheet">
+    <meta name="description" content="Test your GDPR skills by speed running a cookie consent banner">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta property="og:title" content="Than Average" />
+    <meta property="og:description" content="Test your GDPR skills by speed running a cookie consent banner" />
+    <meta property="og:image" content="https://i.ibb.co/0XRj5Bw/header-img.png" />
+    <script src="//cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb-min.js"></script>
+    <script src="scripts/SVGs.js"></script>
+    <script src="scripts/database.js"></script>
+    <script src="scripts/CSSRulePlugin.min.js"></script>
+	<script src="scripts/gsap.min.js"></script>
 </head>
 <body>
-    
+    <div id="Page">
+        <div id="Container">
+            <!-- <div id="Buffer" class="single"></div> -->
+            <div id="NavArea">
+                <h1 id="Title">Rethinking The GSA</h1>
+                <div id="Nav">
+                    <button class="button navButton">Project website</button>
+                    <button class="button">Get in touch</button>
+                </div>
+            </div>
+            <div id="Buffer" class="single"></div>
+            <div id="QuestionArea">
+                <div id="QuesNumArea"><p id="QuesNumText"><span id="SectionName">Values</span> <span id="SectionQuesNum">1</span>/<span id="SectionTotQues">9</span></p></div>
+                <div id="QuesTextArea"><p id="QuesTextText">Your Art School believes...</p></div>
+                <form name="submit-to-google-sheet">
+                    <input name="name" type="text" placeholder="name" required>
+                    <button type="submit">Send</button>
+                  </form>
+                  
+                  <script>
+                    const scriptURL = 'https://script.google.com/macros/u/1/s/AKfycbz1wufGCDRnQyBFez7-DWoLsa1mJGL-8dvEudqLltuCJFQh9I6b/exec'
+                    const form = document.forms['submit-to-google-sheet']
+                  
+                    form.addEventListener('submit', e => {
+                      e.preventDefault()
+                      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                        .then(response => console.log('Success!', response))
+                        .catch(error => console.error('Error!', error.message))
+                    })
+                  </script>
+
+            </div>
+            <div id="Buffer" class="single"></div>
+            <div id="TopAnswerArea">
+                <div id="TopAns1" class="topanswerbox">In stand alone disciplines</div>
+                <div id="TopAns2" class="topanswerbox">In interdisciplinarity</div>
+            </div>
+            <div id="AnswerArea">
+                <div class="answerbox">
+                    <button id="Ans1" class="quizbutton">Completely</button>
+                </div>
+                <div class="answerbox">
+                    <button id="Ans2" class="quizbutton">Mostly</button>
+                </div>
+                <div class="answerbox">
+                    <button id="Ans3" class="quizbutton">Mostly</button>
+                </div>
+                <div class="answerbox">
+                    <button id="Ans4" class="quizbutton">Completely</button>
+                </div>
+            </div>
+            <div id="Buffer" class="double"></div>
+            <div id="PeopleArea"></div>
+            <div id="Buffer" class="single"></div>
+        </div>
+    </div>
+    <div id="some-element"></div>
+
+
+
+
+
+
+    <script src="scripts/quiz.js"></script>
+    <script src="scripts/peoplescript.js"></script>
+    <script src="scripts/mainscript.js"></script>
 </body>
