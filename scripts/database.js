@@ -115,7 +115,7 @@ function saveToGoogleSheet(name){
     fetch(".netlify/functions/api2")
     .then(response => response.json())
     .then(json => {
-        scriptURL = 'https://script.google.com/macros/s/AKfycbz1wufGCDRnQyBFez7-DWoLsa1mJGL-8dvEudqLltuCJFQh9I6b/exec';
+        scriptURL = json.api;
         })
 
 var sendingData = new FormData() // adjusted here
