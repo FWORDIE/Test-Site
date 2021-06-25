@@ -119,7 +119,7 @@ function saveToGoogleSheet(name){
         var sendingData = new FormData() // adjusted here
 sendingData.append('name', name)
 fetch(scriptURL, {method: 'POST', body: sendingData}) // adjusted here
-.then(response => console.log('Success!', response))
+.then(response => console.log('Success!'))
 .catch(error => console.error('Error!', error.message))
         })
 
