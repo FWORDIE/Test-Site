@@ -12,6 +12,8 @@
     <meta property="og:description" content="Test your GDPR skills by speed running a cookie consent banner" />
     <meta property="og:image" content="https://i.ibb.co/0XRj5Bw/header-img.png" />
     <script src="//cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb-min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.css" integrity="sha512-Ho1L8FTfzcVPAlvfkL1BV/Lmy1JDUVAP82/LkhmKbRX5PnQ7CNDHAUp2GZe7ybBpovS+ssJDf+SlBOswrpFr8g==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/js/OverlayScrollbars.min.js" integrity="sha512-B1xv1CqZlvaOobTbSiJWbRO2iM0iii3wQ/LWnXWJJxKfvIRRJa910sVmyZeOrvI854sLDsFCuFHh4urASj+qgw==" crossorigin="anonymous"></script>
     <script src="scripts/SVGs.js"></script>
     <script src="scripts/database.js"></script>
     <script src="scripts/CSSRulePlugin.min.js"></script>
@@ -25,45 +27,49 @@
                 <h1 id="Title">Rethinking The GSA</h1>
                 <div id="Nav">
                     <button class="button navButton">Project website</button>
-                    <button class="button">Get in touch</button>
+                    <button class="button navButton">Get in touch</button>
                 </div>
             </div>
             <div id="Buffer" class="single"></div>
             <div id="QuestionArea">
-                <div id="QuesNumArea"><p id="QuesNumText"><span id="SectionName">Values</span> <span id="SectionQuesNum">1</span>/<span id="SectionTotQues">9</span></p></div>
-                <div id="QuesTextArea"><p id="QuesTextText">Your Art School believes...</p></div>
+                <div id="QuesNumArea"><p id="QuesNumText"><span id="SectionName">Introduction</span> <span id="SectionQuesNum">1</span>/<span id="SectionTotQues">3</span></p></div>
+                <div id="QuesTextArea"><p id="QuesTextText">Imagine you are creating an Art school of the future.</p></div>
+
             </div>
             <div id="Buffer" class="single"></div>
-            <div id="TopAnswerArea">
-                <div id="TopAns1" class="topanswerbox">In stand alone disciplines</div>
-                <div id="TopAns2" class="topanswerbox">In interdisciplinarity</div>
-            </div>
-            <div id="AnswerArea">
-                <div class="answerbox">
-                    <button id="Ans1" class="quizbutton">Completely</button>
-                </div>
-                <div class="answerbox">
-                    <button id="Ans2" class="quizbutton">Mostly</button>
-                </div>
-                <div class="answerbox">
-                    <button id="Ans3" class="quizbutton">Mostly</button>
-                </div>
-                <div class="answerbox">
-                    <button id="Ans4" class="quizbutton">Completely</button>
+            <div id="TopAnswerArea" class="hidableTop">
+                <div id="IntroTextArea">
+                    <p id="IntroTextText">Based entirely on your own prefrences, answer the following questions to design you Art School, and see others resutls as you go.</p>
+                    <a id="IntroLinkText">Why are you asking me to do this?</a>
+                    <button class="button nextButton" id="NextButton" onclick="nextPage(DemoArea1)">Start</button>
                 </div>
             </div>
+            <div id="AnswerArea" class="hidableTop hidden">
+                <div class="answerbox">
+                    <button id="Ans1" class="quizbutton" onclick="Answer4(0)">Completely</button>
+                </div>
+                <div class="answerbox">
+                    <button id="Ans2" class="quizbutton" onclick="Answer4(1)">Mostly</button>
+                </div>
+                <div class="answerbox">
+                    <button id="Ans3" class="quizbutton" onclick="Answer4(2)">Mostly</button>
+                </div>
+                <div class="answerbox">
+                    <button id="Ans4" class="quizbutton" onclick="Answer4(3)">Completely</button>
+                </div>
+            </div>
+            <button id="NextQButton" class="button nextButton hidden" onclick="NextQBut()">Next question</button>
             <div id="Buffer" class="double"></div>
             <div id="PeopleArea"></div>
             <div id="Buffer" class="single"></div>
         </div>
     </div>
     <div id="some-element"></div>
-
-
-
-
-
-
+    <script src="scripts/Answers.js"></script>
+    <script src="scripts/results.js"></script>
+    <script src="scripts/Questions.js"></script>
+    <script src="scripts/parts.js"></script>
+    <script src="scripts/allAnswers.js"></script>
     <script src="scripts/quiz.js"></script>
     <script src="scripts/peoplescript.js"></script>
     <script src="scripts/mainscript.js"></script>

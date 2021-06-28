@@ -42,6 +42,10 @@ p {
   margin: 0px;
 }
 
+button {
+  cursor: pointer;
+}
+
 .button {
   font-size: 1rem;
   border-radius: 50px;
@@ -61,7 +65,7 @@ p {
 }
 
 .navButton {
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 #Container {
@@ -72,13 +76,21 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
   height: 100%;
+}
+
+.selectable {
+  margin-right: 1rem;
+}
+
+.selectable:last-of-type {
+  margin-right: 0rem;
 }
 
 #Page {
@@ -142,6 +154,18 @@ p {
 
 #AnswerArea .answerbox .quizbutton:hover {
   color: #FA0060;
+  border-color: #FA0060;
+}
+
+#AnswerArea .answerbox .nonButton {
+  pointer-events: none;
+  border-width: 0px;
+  -webkit-transition: color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003), background-color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003);
+  transition: color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003), background-color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003);
+}
+
+#AnswerArea .answerbox .nonButton:hover {
+  color: #1D1B1B;
   border-color: #FA0060;
 }
 
@@ -230,6 +254,53 @@ p {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  position: relative;
+  z-index: 1001;
+}
+
+#TopAnswerArea .comment {
+  width: 100%;
+  margin: auto;
+  height: 30vh;
+  background-color: #BDCCCE;
+  outline: none;
+  border: #1D1B1B;
+  border-width: 1px;
+  border-style: solid;
+  resize: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Surt';
+}
+
+#TopAnswerArea #OtherAnswers {
+  width: 100%;
+  margin: auto;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#TopAnswerArea #OtherAnswers #OtherAns {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #FA0060;
+}
+
+#TopAnswerArea .characterCount {
+  margin-bottom: 1rem;
+  font-style: oblique;
 }
 
 #TopAnswerArea .topanswerbox {
@@ -259,6 +330,126 @@ p {
   border-right: solid;
   border-width: 1px;
   border-color: #1D1B1B;
+}
+
+#TopAnswerArea #IntroTextArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 70%;
+  margin-top: -2vh;
+}
+
+#TopAnswerArea #IntroTextArea #IntroTextText {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#TopAnswerArea #IntroTextArea #IntroLinkText {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-decoration: underline;
+  color: #1D1B1B;
+  margin-bottom: 1rem;
+}
+
+#TopAnswerArea #IntroTextArea #summaryText {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+#TopAnswerArea #IntroTextArea .comment.small {
+  max-height: 15vh;
+  margin-bottom: 1rem;
+}
+
+#TopAnswerArea #IntroTextArea .comment.small:last-of-type {
+  margin-bottom: 0rem;
+}
+
+#TopAnswerArea #IntroTextArea #ButtonBox {
+  margin-bottom: 2rem;
+}
+
+#TopAnswerArea #IntroTextArea #ButtonBox .buttonLike {
+  font-size: 1rem;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #1D1B1B;
+  background-color: #BDCCCE;
+  padding: 8px 15px;
+  color: #1D1B1B;
+  margin-left: 1rem;
+}
+
+#TopAnswerArea #IntroTextArea #ButtonBox .buttonLike:focus {
+  border-color: #FA0060;
+  outline: none;
+}
+
+#TopAnswerArea #IntroTextArea #ButtonBox .butselected {
+  border-color: #FA0060;
+  color: #FA0060;
+}
+
+#TopAnswerArea #IntroTextArea #ButtonBox .miniTextArea {
+  margin-top: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: oblique;
+  font-size: 1rem;
+}
+
+.os-scrollbar-handle {
+  background-color: #3d405b !important;
+}
+
+.os-scrollbar.os-scrollbar-vertical {
+  border-radius: 8px;
+  width: 16px;
+  background-color: #f2cc8f;
+  padding: 0px;
+  z-index: 99999;
+  top: 20px !important;
+  bottom: 20px !important;
+}
+
+.nextButton {
+  background-color: #1D1B1B;
+  color: #BDCCCE;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.nextButton:hover {
+  background-color: #FA0060;
+  color: #1D1B1B;
 }
 
 .dot {
@@ -295,6 +486,18 @@ svg {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
   overflow: visible;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.pink {
+  color: #FA0060 !important;
+}
+
+.pinkdot > svg:nth-child(1) > g:nth-child(2) > g:nth-child(1) > path:nth-child(2) {
+  fill: #FA0060 !important;
 }
 
 @media only screen and (max-width: 760px) {

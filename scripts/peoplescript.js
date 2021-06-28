@@ -2,7 +2,7 @@ gsap.registerPlugin(CSSRulePlugin);
 
 let containerHeight = document.getElementById("Container").clientHeight;
 let containerWidth = document.getElementById("Container").clientWidth;
-let speed = 1.1*(containerWidth*0.25) ;
+let speed = 0.8*(containerWidth*0.25) ;
 let navAreaHeight = 0.10;
 let quesAreaHeight = 0.15;
 let answAreaHeight = 0.30;
@@ -34,7 +34,7 @@ let containerPercentageHeight = window.innerHeight/100;
 let containerPercentageWidth = window.innerWidth/100;
 let speedDouble= false;
 let numOfDots = 48;
-let padding = 3*(window.innerWidth/100);
+let padding = 4*(window.innerWidth/100);
 
 //console.log(containerHeight, containerWidth);
 
@@ -186,11 +186,11 @@ function loadLotties() {
         }
 
         let sizeNum = getRandomArbitrary(0.8, 1.2);
-        dotData[n][3] = 4 * sizeNum.toFixed(1);
+        dotData[n][3] = 3 * sizeNum.toFixed(1);
         if(is_mobile == true){
-            dotData[n][3] = 6 * sizeNum.toFixed(1);  
+            dotData[n][3] = 4 * sizeNum.toFixed(1);  
         }else if(is_small==true){
-            dotData[n][3] = 3 * sizeNum.toFixed(1); 
+            dotData[n][3] = 2 * sizeNum.toFixed(1); 
         }
 
         gsap.to(dot, {width:`${dotData[n][3]}vw`});
@@ -437,7 +437,7 @@ function gridsetup(num, bias, rule, runaway) {
         gridArr[i] = randomPointOf(i, bias, rule);
         if (runaway == true) {
             console.log('runaway');
-            gridArr[i][1] = parseFloat(gridArr[i][1]) + containerHeight;
+            gridArr[i][1] = parseFloat(gridArr[i][1]) + 3*(containerHeight/4);
         } else {
         }
         gridArr[i][1] = gridArr[i][1]-0;

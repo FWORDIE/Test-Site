@@ -2,6 +2,7 @@ $grey: #BDCCCE;
 $pink: #FA0060;
 $black: #1D1B1B;
 $small: 1rem;
+$smedium: 1.2rem;
 $medium: 1.5rem;
 $large: 2rem;
 
@@ -50,6 +51,10 @@ p {
     margin: 0px;
 }
 
+button{
+    cursor: pointer;
+}
+
 .button{
     font-size: $small;
     border-radius: 50px;
@@ -67,16 +72,23 @@ p {
 }
 
 .navButton{
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 #Container{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: stretch;
     height: 100%;
 }
 
+.selectable{
+    margin-right: 1rem;
+}
+
+.selectable:last-of-type{
+    margin-right: 0rem;
+}
 #Page{
 
     height: 100%;
@@ -92,6 +104,8 @@ p {
     justify-content: space-between;
     align-items: stretch;
     min-height: 35%;
+
+
 
     .answerbox{
         border-style: solid;
@@ -119,6 +133,16 @@ p {
         }
         .quizbutton:hover{
             color: $pink;
+            border-color: $pink;
+        }
+        .nonButton{
+            pointer-events: none;
+            border-width: 0px;
+
+            transition: color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003), background-color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003);
+        }
+        .nonButton:hover{
+            color: $black;
             border-color: $pink;
         }
     }
@@ -178,6 +202,43 @@ p {
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+    position: relative;
+    z-index: 1001;
+    .comment{
+        width: 100%;
+        margin:auto;
+        height: 30vh;
+        background-color: $grey;
+        outline: none;
+        border: $black;
+        border-width: 1px;
+        border-style: solid;
+        resize: none;
+        padding:1rem;
+        font-size: $smedium;
+        font-family: 'Surt';
+    }
+
+    #OtherAnswers{
+        width: 100%;
+        margin:auto;
+        height: 30vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        #OtherAns{
+            text-align: center;
+            font-size: $medium;
+            color: $pink;
+        }
+
+    }
+
+    .characterCount    {
+        margin-bottom: 1rem;
+        font-style: oblique;
+    }
     .topanswerbox{
         display: flex;
         flex-direction: row;
@@ -195,9 +256,103 @@ p {
         border-right: solid;
         border-width: 1px;
         border-color: $black;
+    }
+    #IntroTextArea{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 70%;
+        margin-top: -2vh;
+        #IntroTextText{
+            font-size: $smedium;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        #IntroLinkText{
+            font-size: $smedium;
+            margin-bottom: 1rem;
+            text-align: center;
+            text-decoration: underline;
+            color: $black;
+            margin-bottom: 1rem;
+        }
+        #summaryText{
+            max-height: 50vh;
+            overflow-y: auto;
+        }
+        .comment.small{
+            max-height: 15vh;
+            margin-bottom: 1rem;
+        }
+        .comment.small:last-of-type{
+            margin-bottom: 0rem;
+        }
+        #ButtonBox{
+            margin-bottom: 2rem;
+            .buttonLike{
+                font-size: $small;
+                border-radius: 50px;
+                border-style: solid;
+                border-width: 1px;
+                border-color: $black;
+                background-color: $grey;
+                padding: 8px 15px;
+                color: $black;
+                margin-left: 1rem;
+            }
+            .buttonLike:focus{
+                border-color: $pink;
+                outline: none;
+            }
+            .butselected{
+                border-color: $pink;
+                color: $pink;
+            }
+            .miniTextArea{
+                margin-top: 1rem;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-style: oblique;
+                font-size: $small;
+            }
+         
+        }
+
     }    
 }
 
+
+.os-scrollbar-handle {
+background-color: #3d405b !important;
+}
+
+.os-scrollbar.os-scrollbar-vertical {
+border-radius: 8px;
+width: 16px;
+background-color: #f2cc8f;
+padding: 0px;
+z-index: 99999;
+top: 20px !important;
+bottom: 20px !important;
+}
+  
+
+
+.nextButton{
+    background-color: $black;
+    color: $grey;
+    margin:auto;
+    margin-top: 2rem;
+}
+.nextButton:hover{
+    background-color: $pink;
+    color: $black;
+}
 
 
 .dot {
@@ -226,7 +381,16 @@ svg {
     overflow: visible;
 
 }
+.hidden{
+    display: none !important;
+}
+.pink{
+    color: $pink !important;
+}
 
+.pinkdot > svg:nth-child(1) > g:nth-child(2) > g:nth-child(1) > path:nth-child(2){
+    fill:$pink !important;
+}
 @media only screen and (max-width: 760px) {
     #some-element { 
         display: none; 

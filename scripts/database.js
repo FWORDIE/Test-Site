@@ -1,21 +1,27 @@
-// var faunadb;
-// var q;
-// var client;
+// Get all question answers, put them into an array [Qnum, Ans_1, Ans_2 ...]
+// Get all long form answers from two seperate collections and put them into an array
 
-// let serverURL;
 
-//     fetch(".netlify/functions/api")
-//     .then(response => response.json())
-//     .then(json => {
-//         faunadb = window.faunadb;
-//         q = faunadb.query;
-//         client = new faunadb.Client({
-//             secret: json.api,
-//             domain: "db.fauna.com",
-//             scheme: "https",
-//         });
 
-//     })
+
+var faunadb;
+var q;
+var client;
+
+let serverURL;
+
+    fetch(".netlify/functions/api")
+    .then(response => response.json())
+    .then(json => {
+        faunadb = window.faunadb;
+        q = faunadb.query;
+        client = new faunadb.Client({
+            secret: json.api,
+            domain: "db.fauna.com",
+            scheme: "https",
+        });
+
+    })
     
 // // Load Fauna Stuff
 // let NoCalls = 0;
@@ -23,105 +29,172 @@
 // var faunadb = window.faunadb;
 // var q = faunadb.query;
 // var client = new faunadb.Client({
-//     secret: "fnAEH9qaMKACAZUacat_8gPzT9yf_m85U7fy8kdb",
+//     secret: "",
 //     domain: "db.fauna.com",
 //     scheme: "https",
 // });
 
+function GetDataBase() {
+    NoCalls ++;
+    logger('GetDataBase',`Calls: ${NoCalls}, Posts: ${NoPosts}`);
+    client
+        .query(
+            q.Paginate(q.Match(q.Index("GetAllAns")))
 
-// // Load DataBase from Fauna
-// function GetDataBase() {
-//     NoCalls ++;
-//     logger('GetDataBase',`Calls: ${NoCalls}, Posts: ${NoPosts}`);
-//     client
-//         .query(
-//             q.Paginate(q.Match(q.Index("NewDemQuestions")))
+            )
 
-//             )
+        .then((ret) => {
+            Answers = ret.data;
+            logger('GetDataBase',Answers);
+        })
+        .catch((err) => console.error("Error: %s", err));
+}
 
-//         .then((ret) => {
-//             questions = ret.data;
-//             logger('GetDataBase',questions);
-//         })
-//         .catch((err) => console.error("Error: %s", err));
-// }
+// Update Fauna DataBase
+function UpdateDataBase(Num, Answer) {
+    NoPosts ++;
+    logger('GetDataBase',`Calls: ${NoCalls}, Posts: ${NoPosts}`);
+    if(Answer == 0){
+        client
+        .query(
+            q.Map(q.Paginate(q.Match(q.Index('AllAnswers'),Num)),
+            q.Lambda(
+                'X',
+                q.Update(
+                  q.Var('X'),
+                  {
+                        data: {
+                        Ans_1: q.Add(
+                            q.Select(['data', 'Ans_1'], q.Get(q.Var('X'))),
+                            1
+                        )
+                        
+                    }
+                  }
+                )
+            )
+        )
+        )
+        .then((ret) => logger('UpdateDataBase',ret))
+        .catch((err) => console.error("Error: %s", err));
+    }else if(Answer == 1){
+        client
+        .query(
+            q.Map(q.Paginate(q.Match(q.Index('AllAnswers'),Num)),
+            q.Lambda(
+                'X',
+                q.Update(
+                  q.Var('X'),
+                  {
+                        data: {
+                        Ans_2: q.Add(
+                            q.Select(['data', 'Ans_2'], q.Get(q.Var('X'))),
+                            1
+                        )
+                        
+                    }
+                  }
+                )
+            )
+        )
+        )
+        .then((ret) => logger('UpdateDataBase',ret))
+        .catch((err) => console.error("Error: %s", err));
 
-// // Update Fauna DataBase
-// function UpdateDataBase(Num, Answer) {
-//     NoPosts ++;
-//     logger('GetDataBase',`Calls: ${NoCalls}, Posts: ${NoPosts}`);
-//     if(Answer == 'yes'){
-//         client
-//         .query(
-//             q.Map(q.Paginate(q.Match(q.Index('NewNumbers'),Num)),
-//             q.Lambda(
-//                 'X',
-//                 q.Update(
-//                   q.Var('X'),
-//                   {
-//                     data: {
-//                         Total: q.Add(
-//                         q.Select(['data', 'Total'], q.Get(q.Var('X'))),
-//                         1
-//                       ),
-//                       Yes: q.Add(
-//                         q.Select(['data', 'Yes'], q.Get(q.Var('X'))),
-//                         1
-//                       )
-//                     }
-//                   }
-//                 )
-//             )
-//         )
-//         )
-//         .then((ret) => logger('UpdateDataBase',ret))
-//         .catch((err) => console.error("Error: %s", err));
-//     }else{
-//         client
-//         .query(
-//             q.Map(q.Paginate(q.Match(q.Index('NewNumbers'),Num)),
-//             q.Lambda(
-//                 'X',
-//                 q.Update(
-//                   q.Var('X'),
-//                   {
-//                     data: {
-//                         Total: q.Add(
-//                         q.Select(['data', 'Total'], q.Get(q.Var('X'))),
-//                         1
-//                       ),
-//                       No: q.Add(
-//                         q.Select(['data', 'No'], q.Get(q.Var('X'))),
-//                         1
-//                       )
-//                     }
-//                   }
-//                 )
-//             )
-//         )
-//         )
-//         .then((ret) => logger('UpdateDataBase',ret))
-//         .catch((err) => console.error("Error: %s", err));
-//     }
-    
-// }
+    }else if(Answer == 2){
+        client
+        .query(
+            q.Map(q.Paginate(q.Match(q.Index('AllAnswers'),Num)),
+            q.Lambda(
+                'X',
+                q.Update(
+                  q.Var('X'),
+                  {
+                        data: {
+                        Ans_3: q.Add(
+                            q.Select(['data', 'Ans_3'], q.Get(q.Var('X'))),
+                            1
+                        )
+                        
+                    }
+                  }
+                )
+            )
+        )
+        )
+        .then((ret) => logger('UpdateDataBase',ret))
+        .catch((err) => console.error("Error: %s", err));
+
+    }else{
+        client
+        .query(
+            q.Map(q.Paginate(q.Match(q.Index('AllAnswers'),Num)),
+            q.Lambda(
+                'X',
+                q.Update(
+                  q.Var('X'),
+                  {
+                        data: {
+                        Ans_4: q.Add(
+                            q.Select(['data', 'Ans_4'], q.Get(q.Var('X'))),
+                            1
+                        )
+                        
+                    }
+                  }
+                )
+            )
+        )
+        )
+        .then((ret) => logger('UpdateDataBase',ret))
+        .catch((err) => console.error("Error: %s", err));
+
+    }
+}
 
 let scriptURL = '';
 
-function saveToGoogleSheet(name){
+function saveToGoogleSheet(){
 
     let serverURL;
 
-    fetch(".netlify/functions/api2")
-    .then(response => response.json())
-    .then(json => {
-        scriptURL = json.api;
+    // fetch(".netlify/functions/api2")
+    // .then(response => response.json())
+    // .then(json => {
+        //scriptURL = json.api;
+        scriptURL = 'https://script.google.com/macros/s/AKfycbz1wufGCDRnQyBFez7-DWoLsa1mJGL-8dvEudqLltuCJFQh9I6b/exec';
         var sendingData = new FormData() // adjusted here
-sendingData.append('name', name)
-fetch(scriptURL, {method: 'POST', body: sendingData}) // adjusted here
-.then(response => console.log('Success!'))
-.catch(error => console.error('Error!', error.message))
-        })
+        sendingData.append('GSA_Involvement', allAnswers.GSA_Involvement);
+        sendingData.append('GSA_Association', allAnswers.GSA_Association);
+        sendingData.append('Values_1', allAnswers.Values_1);
+        sendingData.append('Values_2', allAnswers.Values_2);
+        sendingData.append('Values_3', allAnswers.Values_3);
+        sendingData.append('Values_4', allAnswers.Values_4);
+        sendingData.append('Values_5', allAnswers.Values_5);
+        sendingData.append('Values_6', allAnswers.Values_6);
+        sendingData.append('Values_7', allAnswers.Values_7);
+        sendingData.append('Values_8', allAnswers.Values_8);
+        sendingData.append('Values_9', allAnswers.Values_9);
+        sendingData.append('Scenarios_1', allAnswers.Scenarios_1);
+        sendingData.append('Scenarios_2', allAnswers.Scenarios_2);
+        sendingData.append('Scenarios_3', allAnswers.Scenarios_3);
+        sendingData.append('Scenarios_4', allAnswers.Scenarios_4);
+        sendingData.append('Scenarios_5', allAnswers.Scenarios_5);
+        sendingData.append('Scenarios_6', allAnswers.Scenarios_6);
+        sendingData.append('Scenarios_7', allAnswers.Scenarios_7);
+        sendingData.append('Scenarios_8', allAnswers.Scenarios_8);
+        sendingData.append('Scenarios_9', allAnswers.Scenarios_9);
+        sendingData.append('Scenarios_10', allAnswers.Scenarios_10);
+        sendingData.append('Scenarios_11', allAnswers.Scenarios_11);
+        sendingData.append('Open_1', allAnswers.Open_1);
+        sendingData.append('Open_2', allAnswers.Open_2);
+        sendingData.append('Hope', allAnswers.Hope);
+        sendingData.append('Fear', allAnswers.Fear);
+
+        fetch(scriptURL, {method: 'POST', body: sendingData}) // adjusted here
+        .then(response => console.log('Success!'))
+        .catch(error => console.error('Error!', error.message))
+        //})
 
 
 }
