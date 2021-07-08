@@ -35,6 +35,6 @@ function answer(ans){
 
 function showTop(topAnsArr,Qnumber){
     let textArea = document.getElementById('QuesTextText');
-    let textString = `${topAnsArr[0].toFixed(0)}% of Particepents’ ${AllQuestions[Qnumber][7]} ${AllQuestions[Qnumber][8+topAnsArr[1]]}`
+    let textString = `${topAnsArr[0].toFixed(0)}% of participants' ${AllQuestions[Qnumber][7]} ${AllQuestions[Qnumber][8+topAnsArr[1]]}`
     textArea.innerText = textString;
 }

@@ -156,7 +156,7 @@ function setUpQuestion() {
     if (Qnumber == 0) {
         longestTime = 0;
     }
-else {
+
         if (Qnumber < 9) {
             SectionName.innerHTML = "Values";
             SectionTotQues.innerHTML = "25";
@@ -179,7 +179,7 @@ else {
             TopAns1.innerHTML = AllQuestions[Qnumber][2];
             TopAns2.innerHTML = AllQuestions[Qnumber][3];
         }, (longestTime / 2) * 1000);
-    }
+    
 }
 
 function Answer4(ans) {
