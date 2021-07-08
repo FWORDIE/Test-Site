@@ -100,7 +100,7 @@ let OpenQuesArea2 = [
     "Open Questions",
     "24",
     "25",
-    "My future Art School's motto would be:",
+    "In my first 100 days as director of my future Art School I would…",
     "",
     "",
     `
