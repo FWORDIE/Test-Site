@@ -41,6 +41,7 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  text-align: center;
 }
 
 * {
@@ -119,6 +120,7 @@ button{
         justify-content: flex-end;
         align-items: center;
         padding-bottom: 1rem;
+        border-top: none;
 
         .quizbutton{
             font-size: $small;
@@ -153,6 +155,14 @@ button{
         border-color: $black;
     }
 
+}
+
+#BindingBox{
+    max-height: 30vh;
+    overflow-y: scroll;
+    .bound{
+        margin-top: 1rem;
+    }
 }
 
 #NavArea{
@@ -197,7 +207,7 @@ button{
 }
 
 #TopAnswerArea{
-    min-height: 5%;
+    // min-height: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -247,10 +257,10 @@ button{
         border-style: solid;
         border-width: 1px;
         border-right: none;
-        border-bottom: none;
         border-color: $black;
         width:50%;
-        height: 100%;
+        min-height: 100%;
+        padding:10px;
     }
     .topanswerbox:last-of-type{
         border-right: solid;
@@ -270,6 +280,12 @@ button{
             margin-bottom: 1rem;
             text-align: center;
         }
+        #HiddenText{
+            font-size: $smedium;
+            margin-bottom: 1rem;
+            text-align: center;
+
+        }
         #IntroLinkText{
             font-size: $smedium;
             margin-bottom: 1rem;
@@ -277,6 +293,7 @@ button{
             text-decoration: underline;
             color: $black;
             margin-bottom: 1rem;
+            cursor: pointer;
         }
         #summaryText{
             max-height: 50vh;
@@ -348,6 +365,8 @@ bottom: 20px !important;
     color: $grey;
     margin:auto;
     margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 .nextButton:hover{
     background-color: $pink;
@@ -385,6 +404,10 @@ svg {
     display: none !important;
 }
 .pink{
+    color: $pink !important;
+}
+
+.pink2{
     color: $pink !important;
 }
 

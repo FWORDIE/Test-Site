@@ -10,6 +10,7 @@ function pageSetUp() {
     loadLotties();
     let readywidth = document.getElementById("no47").offsetHeight;
     wait(readywidth, 0);
+    // GetDataBase();
     //FadeIn();
 }
 

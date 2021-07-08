@@ -8,31 +8,31 @@ var faunadb;
 var q;
 var client;
 
-let serverURL;
+// let serverURL;
 
-    fetch(".netlify/functions/api")
-    .then(response => response.json())
-    .then(json => {
-        faunadb = window.faunadb;
-        q = faunadb.query;
-        client = new faunadb.Client({
-            secret: json.api,
-            domain: "db.fauna.com",
-            scheme: "https",
-        });
+//     fetch(".netlify/functions/api")
+//     .then(response => response.json())
+//     .then(json => {
+//         faunadb = window.faunadb;
+//         q = faunadb.query;
+//         client = new faunadb.Client({
+//             secret: json.api,
+//             domain: "db.fauna.com",
+//             scheme: "https",
+//         });
 
-    })
+//     })
     
 // // Load Fauna Stuff
-// let NoCalls = 0;
-// let NoPosts = 0;
-// var faunadb = window.faunadb;
-// var q = faunadb.query;
-// var client = new faunadb.Client({
-//     secret: "",
-//     domain: "db.fauna.com",
-//     scheme: "https",
-// });
+let NoCalls = 0;
+let NoPosts = 0;
+var faunadb = window.faunadb;
+var q = faunadb.query;
+var client = new faunadb.Client({
+    secret: "",
+    domain: "db.fauna.com",
+    scheme: "https",
+});
 
 function GetDataBase() {
     NoCalls ++;
