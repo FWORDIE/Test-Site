@@ -2,6 +2,8 @@ let AnsButs = [];
 let topAns;
 let QuesNumArea = document.getElementById("QuesNumArea");
 let QuesTextArea = document.getElementById("QuesTextArea");
+let QuesTextText = document.getElementById("QuesTextText");
+
 let TopAns1 = document.getElementById("TopAns1");
 let TopAns2 = document.getElementById("TopAns2");
 let QuestionArea = document.getElementById("QuestionArea");
@@ -159,10 +161,10 @@ function setUpQuestion() {
 
     if (Qnumber < 9) {
         SectionName.innerHTML = "Values";
-        SectionTotQues.innerHTML = "25";
+        SectionTotQues.innerHTML = "22";
     } else {
         SectionName.innerHTML = "Scenarios";
-        SectionTotQues.innerHTML = "25";
+        SectionTotQues.innerHTML = "22";
     }
     AnsButs = document.getElementsByClassName("quizbutton");
     NextQButton.classList.add("hidden");
@@ -174,10 +176,12 @@ function setUpQuestion() {
             AnsButs[i].classList.remove("pink");
         }
         SectionQuesNum.innerHTML = AllQuestions[Qnumber][0];
-        QuesTextText.innerHTML = AllQuestions[Qnumber][1];
+        QuesTextText.innerText = AllQuestions[Qnumber][1];
+        console.log(AllQuestions[Qnumber][1]);
         TopAns1.innerHTML = AllQuestions[Qnumber][2];
         TopAns2.innerHTML = AllQuestions[Qnumber][3];
     }, (longestTime / 2) * 1000);
+
 }
 
 function Answer4(ans) {
@@ -245,6 +249,26 @@ function recordAnswer(ans) {
         allAnswersName = `Scenarios_${Qnumber - 8}`;
     }
     allAnswers[allAnswersName] = Qanswer;
+}
+
+function showTop(topAnsArr, Qnumber) {
+    let QuestextArea = document.getElementById("QuesTextArea");
+
+    if (longestTime < 1.5){
+        longestTime = 2;
+    }
+        gsap.to(QuestextArea, { duration: longestTime / 2, opacity: 0 });
+
+    
+
+    setTimeout(function () {
+        let textArea = document.getElementById("QuesTextText");
+        let textString = `${topAnsArr[0].toFixed(0)}% of participants' ${AllQuestions[Qnumber][7]} ${AllQuestions[Qnumber][8 + topAnsArr[1]]}`;
+        textArea.innerText = textString;
+        gsap.to(QuestextArea, { duration: longestTime / 2, opacity: 1 });
+
+    }, (longestTime/2) * 1000);
+
 }
 
 function setUpOpenQuestions(HMTL) {
