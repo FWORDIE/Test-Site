@@ -1,4 +1,3 @@
-
 var Logger = true;
 
 // When Page Loads
@@ -15,11 +14,9 @@ function pageSetUp() {
 }
 
 //Logger
-function logger(func,thing){
-    if(Logger == true){
-    console.log(`${func} whispers:`);
-    console.log(thing);
+function logger(func, thing) {
+    if (Logger == true) {
+        console.log(`${func} whispers:`);
+        console.log(thing);
     }
 }
-
-

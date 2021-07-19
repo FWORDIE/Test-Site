@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Surt';
+  font-family: "Surt";
   src: url("/fonts/Surt-Regular.woff2") format("woff2"), url("/fonts/Surt-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: 'Surt';
+  font-family: "Surt";
   src: url("/fonts/Surt-RegularOblique.woff2") format("woff2"), url("/fonts/Surt-RegularOblique.woff") format("woff");
   font-weight: normal;
   font-style: oblique;
@@ -15,8 +15,8 @@
 }
 
 html {
-  background-color: #BDCCCE;
-  font-family: 'Surt';
+  background-color: #bdccce;
+  font-family: "Surt";
   font-style: normal;
   font-size: 16px;
 }
@@ -52,17 +52,17 @@ button {
   border-radius: 50px;
   border-style: solid;
   border-width: 1px;
-  border-color: #1D1B1B;
-  background-color: #BDCCCE;
+  border-color: #1d1b1b;
+  background-color: #bdccce;
   padding: 8px 15px;
-  color: #1D1B1B;
+  color: #1d1b1b;
   -webkit-transition: color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003), background-color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003);
   transition: color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003), background-color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003);
 }
 
 .button:hover {
-  background-color: #1D1B1B;
-  color: #BDCCCE;
+  background-color: #1d1b1b;
+  color: #bdccce;
 }
 
 .navButton {
@@ -121,7 +121,7 @@ button {
   border-style: solid;
   border-width: 1px;
   border-right: none;
-  border-color: #1D1B1B;
+  border-color: #1d1b1b;
   width: 25%;
   height: 100%;
   display: -webkit-box;
@@ -146,17 +146,17 @@ button {
   border-radius: 50px;
   border-style: solid;
   border-width: 1px;
-  border-color: #1D1B1B;
-  background-color: #BDCCCE;
+  border-color: #1d1b1b;
+  background-color: #bdccce;
   padding: 8px 15px;
-  color: #1D1B1B;
+  color: #1d1b1b;
   -webkit-transition: color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003), background-color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003);
   transition: color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003), background-color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003);
 }
 
 #AnswerArea .answerbox .quizbutton:hover {
-  color: #FA0060;
-  border-color: #FA0060;
+  color: #fa0060;
+  border-color: #fa0060;
 }
 
 #AnswerArea .answerbox .nonButton {
@@ -167,14 +167,14 @@ button {
 }
 
 #AnswerArea .answerbox .nonButton:hover {
-  color: #1D1B1B;
-  border-color: #FA0060;
+  color: #1d1b1b;
+  border-color: #fa0060;
 }
 
 #AnswerArea .answerbox:last-of-type {
   border-right: solid;
   border-width: 1px;
-  border-color: #1D1B1B;
+  border-color: #1d1b1b;
 }
 
 #BindingBox {
@@ -247,7 +247,7 @@ button {
 
 #PeopleArea {
   min-height: 15%;
-  background-color: #FA0060 0.1;
+  background-color: #fa0060 0.1;
 }
 
 #TopAnswerArea {
@@ -272,15 +272,15 @@ button {
   width: 100%;
   margin: auto;
   height: 30vh;
-  background-color: #BDCCCE;
+  background-color: #bdccce;
   outline: none;
-  border: #1D1B1B;
+  border: #1d1b1b;
   border-width: 1px;
   border-style: solid;
   resize: none;
   padding: 1rem;
   font-size: 1.2rem;
-  font-family: 'Surt';
+  font-family: "Surt";
 }
 
 #TopAnswerArea #OtherAnswers {
@@ -305,7 +305,7 @@ button {
 #TopAnswerArea #OtherAnswers #OtherAns {
   text-align: center;
   font-size: 1.5rem;
-  color: #FA0060;
+  color: #fa0060;
 }
 
 #TopAnswerArea .characterCount {
@@ -330,7 +330,7 @@ button {
   border-style: solid;
   border-width: 1px;
   border-right: none;
-  border-color: #1D1B1B;
+  border-color: #1d1b1b;
   width: 50%;
   min-height: 100%;
   padding: 10px;
@@ -339,7 +339,7 @@ button {
 #TopAnswerArea .topanswerbox:last-of-type {
   border-right: solid;
   border-width: 1px;
-  border-color: #1D1B1B;
+  border-color: #1d1b1b;
 }
 
 #TopAnswerArea #IntroTextArea {
@@ -378,7 +378,7 @@ button {
   margin-bottom: 1rem;
   text-align: center;
   text-decoration: underline;
-  color: #1D1B1B;
+  color: #1d1b1b;
   margin-bottom: 1rem;
   cursor: pointer;
 }
@@ -406,21 +406,21 @@ button {
   border-radius: 50px;
   border-style: solid;
   border-width: 1px;
-  border-color: #1D1B1B;
-  background-color: #BDCCCE;
+  border-color: #1d1b1b;
+  background-color: #bdccce;
   padding: 8px 15px;
-  color: #1D1B1B;
+  color: #1d1b1b;
   margin-left: 1rem;
 }
 
 #TopAnswerArea #IntroTextArea #ButtonBox .buttonLike:focus {
-  border-color: #FA0060;
+  border-color: #fa0060;
   outline: none;
 }
 
 #TopAnswerArea #IntroTextArea #ButtonBox .butselected {
-  border-color: #FA0060;
-  color: #FA0060;
+  border-color: #fa0060;
+  color: #fa0060;
 }
 
 #TopAnswerArea #IntroTextArea #ButtonBox .miniTextArea {
@@ -458,8 +458,8 @@ button {
 }
 
 .nextButton {
-  background-color: #1D1B1B;
-  color: #BDCCCE;
+  background-color: #1d1b1b;
+  color: #bdccce;
   margin: auto;
   margin-top: 2rem;
   margin-right: 1rem;
@@ -467,8 +467,8 @@ button {
 }
 
 .nextButton:hover {
-  background-color: #FA0060;
-  color: #1D1B1B;
+  background-color: #fa0060;
+  color: #1d1b1b;
 }
 
 .dot {
@@ -512,34 +512,79 @@ svg {
 }
 
 .pink {
-  color: #FA0060 !important;
+  color: #fa0060 !important;
 }
 
 .pink2 {
-  color: #FA0060 !important;
+  color: #fa0060 !important;
 }
 
 .pinkdot > svg:nth-child(1) > g:nth-child(2) > g:nth-child(1) > path:nth-child(2) {
-  fill: #FA0060 !important;
+  fill: #fa0060 !important;
+}
+
+#MobOnly {
+  display: none;
 }
 
 @media only screen and (max-width: 760px) {
-  #some-element {
-    display: none;
+  .desk {
+    display: none !important;
+  }
+  .dot {
+    display: none !important;
+  }
+  #Nav {
+    display: none !important;
+  }
+  #NavArea {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: auto;
+  }
+  #Container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #MobOnly {
+    display: block;
+    padding: 0px 5vw;
+    margin-top: 2rem;
+  }
+  #MobOnly #ButtonBox {
+    margin-top: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #MobOnly #ButtonBox .button {
+    margin-top: 1rem;
   }
 }
 
 .cls-1 {
   fill-opacity: 0.1;
-  fill: #1D1B1B;
+  fill: #1d1b1b;
 }
 
 .cls-2 {
-  fill: #1D1B1B;
-  stroke: #BDCCCE;
+  fill: #1d1b1b;
+  stroke: #bdccce;
 }
 
 .cls-3 {
-  fill: #BDCCCE;
+  fill: #bdccce;
 }
 /*# sourceMappingURL=style.css.map */

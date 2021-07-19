@@ -2,12 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Rethinking GSA</title>
-        <meta content="Rethinking GSA" name="description" />
+        <title>Build your future Art School</title>
+        <meta content="Build your future Art School" name="description" />
         <meta content="AndThen & Fred Wordie" name="author" />
         <link href="style/style.css" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="Rethinking GSA" />
+        <meta property="og:title" content="Build your future Art School" />
         <script src="//cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb-min.js"></script>
         <link
             rel="stylesheet"
@@ -30,26 +30,29 @@
             <div id="Container">
                 <!-- <div id="Buffer" class="single"></div> -->
                 <div id="NavArea">
-                    <h1 id="Title">Rethinking GSA</h1>
+                    <h1 id="Title">Build your future Art School</h1>
                     <div id="Nav">
-                        <a href="https://www.thefutureofgsa.com/" target="_blank"><button class="button navButton">Project website</button></a> 
-                        <a href="mailto:questions@thefutureofgsa.com?subject=Rethinking%20GSA%20%E2%80%94%20question%20suggestion&body=Here%20is%20the%20question%20I%20would%20suggest%20to%20add%20to%20the%20survey%3A%20%0A%0A%0AThe%20reason%20I%20think%20it%20should%20be%20added%20is%3A%20%0A"><button class="button navButton">Submit a question</button></a>
+                        <a href="https://www.thefutureofgsa.com/" target="_blank"><button class="button navButton">Project website</button></a>
+                        <a
+                            href="mailto:questions@thefutureofgsa.com?subject=Rethinking%20GSA%20%E2%80%94%20question%20suggestion&body=Here%20is%20the%20question%20I%20would%20suggest%20to%20add%20to%20the%20survey%3A%20%0A%0A%0AThe%20reason%20I%20think%20it%20should%20be%20added%20is%3A%20%0A"
+                            ><button class="button navButton">Submit a question</button></a
+                        >
                     </div>
                 </div>
-                <div id="Buffer" class="single"></div>
-                <div id="QuestionArea">
+                <div id="Buffer" class="single desk"></div>
+                <div id="QuestionArea" class="desk">
                     <div id="QuesNumArea">
                         <p id="QuesNumText">
                             <span id="SectionName">Introduction</span>
-                            <span id="HiddenIntro" class='hidden'><span id="SectionQuesNum">1</span>/<span id="SectionTotQues">25</span></span>
+                            <span id="HiddenIntro" class="hidden"><span id="SectionQuesNum">1</span>/<span id="SectionTotQues">25</span></span>
                         </p>
                     </div>
                     <div id="QuesTextArea">
                         <p id="QuesTextText">Imagine you are creating an Art school of the future.</p>
                     </div>
                 </div>
-                <div id="Buffer" class="single"></div>
-                <div id="TopAnswerArea" class="hidableTop">
+                <div id="Buffer" class="single desk"></div>
+                <div id="TopAnswerArea" class="hidableTop desk">
                     <div id="IntroTextArea" class="fading">
                         <p id="IntroTextText">
                             What direction do you believe Art School education should be going in and what choices should be made to steer in that direction?
@@ -64,17 +67,22 @@
                         <a id="IntroLinkText" onclick="showHidden()">Why are you asking me to do this?</a>
                         <p id="HiddenText" class="hidden">
                             We are asking you to do this as part of a project called
-                            <a id="IntroLinkText" href="https://www.thefutureofgsa.com/" target="_blank"> ‘Rethinking GSA: A collective conversation about our future.’ </a>
+                            <a id="IntroLinkText" href="https://www.thefutureofgsa.com/" target="_blank">
+                                ‘Rethinking GSA: A collective conversation about our future.’
+                            </a>
                             The aim of this project is to understand the priorities of the community of the GSA to inform the GSA’s next steps (these will be
                             formally captured in its next strategic plan).
                         </p>
                         <div class="answerbox">
-                            <a href="mailto:questions@thefutureofgsa.com?subject=Rethinking%20GSA%20%E2%80%94%20question%20suggestion&body=Here%20is%20the%20question%20I%20would%20suggest%20to%20add%20to%20the%20survey%3A%20%0A%0A%0AThe%20reason%20I%20think%20it%20should%20be%20added%20is%3A%20%0A"><button class="button">Submit a question</button></a>
+                            <a
+                                href="mailto:questions@thefutureofgsa.com?subject=Rethinking%20GSA%20%E2%80%94%20question%20suggestion&body=Here%20is%20the%20question%20I%20would%20suggest%20to%20add%20to%20the%20survey%3A%20%0A%0A%0AThe%20reason%20I%20think%20it%20should%20be%20added%20is%3A%20%0A"
+                                ><button class="button">Submit a question</button></a
+                            >
                             <button class="button nextButton" id="NextButton" onclick="nextPage(DemoArea1)">Start survey</button>
                         </div>
                     </div>
                 </div>
-                <div id="AnswerArea" class="hidableTop hidden">
+                <div id="AnswerArea" class="hidableTop hidden desk">
                     <div class="answerbox">
                         <button id="Ans1" class="quizbutton" onclick="Answer4(0)">Completely</button>
                     </div>
@@ -88,12 +96,25 @@
                         <button id="Ans4" class="quizbutton" onclick="Answer4(3)">Completely</button>
                     </div>
                 </div>
-                <div id="ButtonBox">
-                <button id="NextQButton" class="button nextButton hidden" onclick="NextQBut()">Next question</button>
-            </div>
-                <div id="Buffer" class="double"></div>
-                <div id="PeopleArea"></div>
-                <div id="Buffer" class="single"></div>
+                <div id="ButtonBox" class="desk">
+                    <button id="NextQButton" class="button nextButton hidden desk" onclick="NextQBut()">Next question</button>
+                </div>
+                <div id="Buffer" class="double desk"></div>
+                <div id="PeopleArea desk"></div>
+                <div id="Buffer" class="single desk"></div>
+                <div id="MobOnly">
+                    <div id="IntroTextArea" class="fading">
+                        <div id="QuesTextArea">
+                            <p id="QuesTextText">Unfortunately, this survey only functions on desktop devices. Need a reminder to do it later? Email yourself a link to the survey. </p>
+                        </div>
+                        <div id="ButtonBox">
+                            <a href="mailto:questions@thefutureofgsa.com?subject=Rethinking%20GSA%20%E2%80%94%20question%20suggestion&body=Here%20is%20the%20question%20I%20would%20suggest%20to%20add%20to%20the%20survey%3A%20%0A%0A%0AThe%20reason%20I%20think%20it%20should%20be%20added%20is%3A%20%0A"><button class="button">Email yourself the link</button></a>
+                            <button class="button " id="NextButtonCopy" onclick="location.href='https://www.thefutureofgsa.com'">Project website</button>
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="some-element"></div>

@@ -29,7 +29,7 @@ let IntroTextArea = `
 let DemoArea1 = [
     "Introduction",
     "1",
-    "25",
+    "22",
     "What’s your involvement with GSA?",
     "",
     "",
@@ -53,7 +53,7 @@ let DemoArea1 = [
 let DemoArea2 = [
     "Introduction",
     "2",
-    "25",
+    "22",
     "If applicable, what school(s) have you/are you associated with?",
     "",
     "",
@@ -77,8 +77,8 @@ let DemoArea2 = [
 
 let OpenQuesArea1 = [
     "Open Questions",
-    "23",
-    "25",
+    "17",
+    "22",
     "I want my future Art School to be known for...",
     "",
     "",
@@ -98,9 +98,70 @@ let OpenQuesArea1 = [
 
 let OpenQuesArea2 = [
     "Open Questions",
-    "24",
-    "25",
+    "18",
+    "22",
     "In my first 100 days as director of my future Art School I would…",
+    "",
+    "",
+    `
+<div id="IntroTextArea">
+    <p class="characterCount" id="Characters"><span id="CharUsed">0</span>/280 characters used </p>
+    <textarea type="text" class="comment" id="comment" name="comment" placeholder="Type your answer" onkeyup="limitText(this,280);" onkeypress="limitText(this,280);" onkeydown="limitText(this,280);"></textarea>
+    <div Id="OtherAnswers" class="hidden"><p id="OtherAns">Click on a blob to see their answer</p></div>
+    <button id="NextQButtonOpen" class="button nextButton" onclick="openButAnswer()">Submit answer & read others</button>    
+    <button id="NextQButtonOpenNext" class="button nextButton hidden" onclick="NextOpenQuestion(OpenQuesArea3)">Next question</button> 
+</div>
+`,
+    "",
+    false,
+];
+
+let OpenQuesArea3 = [
+    "Open Questions",
+    "19",
+    "22",
+    "My future Art School will nurture…",
+    "",
+    "",
+    `
+<div id="IntroTextArea">
+    <p class="characterCount" id="Characters"><span id="CharUsed">0</span>/280 characters used </p>
+    <textarea type="text" class="comment" id="comment" name="comment" placeholder="Type your answer" onkeyup="limitText(this,280);" onkeypress="limitText(this,280);" onkeydown="limitText(this,280);"></textarea>
+    <div Id="OtherAnswers" class="hidden"><p id="OtherAns">Click on a blob to see their answer</p></div>
+    <button id="NextQButtonOpen" class="button nextButton" onclick="openButAnswer()">Submit answer & read others</button>
+    <button id="NextQButtonOpenNext" class="button nextButton hidden" onclick="NextOpenQuestion(OpenQuesArea4)">Next question</button> 
+    
+</div>
+`,
+    "",
+    false,
+];
+
+let OpenQuesArea4 = [
+    "Open Questions",
+    "20",
+    "22",
+    "My future Art School will provide students with the following added value once they graduate…",
+    "",
+    "",
+    `
+<div id="IntroTextArea">
+    <p class="characterCount" id="Characters"><span id="CharUsed">0</span>/280 characters used </p>
+    <textarea type="text" class="comment" id="comment" name="comment" placeholder="Type your answer" onkeyup="limitText(this,280);" onkeypress="limitText(this,280);" onkeydown="limitText(this,280);"></textarea>
+    <div Id="OtherAnswers" class="hidden"><p id="OtherAns">Click on a blob to see their answer</p></div>
+    <button id="NextQButtonOpen" class="button nextButton" onclick="openButAnswer()">Submit answer & read others</button>    
+    <button id="NextQButtonOpenNext" class="button nextButton hidden" onclick="NextOpenQuestion(OpenQuesArea5)">Next question</button> 
+</div>
+`,
+    "",
+    false,
+];
+
+let OpenQuesArea5 = [
+    "Open Questions",
+    "21",
+    "22",
+    "My future Art School will attract staff to work at it by…",
     "",
     "",
     `
@@ -130,8 +191,17 @@ let SummaryArea = [
     <p id="ValsummaryText"></p>
     <p id="IntroTextText" class="bound" >Scenarios</p>
     <p id="ScesummaryText"></p>
-    <p id="IntroTextText" class="bound" >Open questions</p>
-    <p id="OpesummaryText"></p>
+    <p id="IntroTextText" class="bound" >When asked, what you want your future Art school to be known for? You said it would be known for: </p>
+    <p id="OpesummaryText1"></p>
+    <p id="IntroTextText" class="bound" >When asked, what you would do in your first 100 days leading your future Art School? You said you would: </p>
+    <p id="OpesummaryText2"></p>
+    <p id="IntroTextText" class="bound" >When asked, what traits you hope your Art School will nurture in its students? You said:</p>
+    <p id="OpesummaryText3"></p>
+    <p id="IntroTextText" class="bound" >When asked, what added value will your future Art School provide students by the time they graduate? You said:</p>
+    <p id="OpesummaryText4"></p>
+    <p id="IntroTextText" class="bound" >When asked, what attracts staff to work for your future Art School? You said:</p>
+    <p id="OpesummaryText5"></p>
+    
     </div>
     <div id="ButtonBox">
     <button class="button " id="NextButtonCopy" onclick="copy()">Copy text</button>
@@ -145,8 +215,8 @@ let SummaryArea = [
 
 let HopesArea = [
     "Lastly, a question about GSA.",
-    "25",
-    "25",
+    "22",
+    "22",
     "What are your hopes and fears for the future of GSA?",
     "",
     "",

@@ -1,62 +1,60 @@
-$grey: #BDCCCE;
-$pink: #FA0060;
-$black: #1D1B1B;
+$grey: #bdccce;
+$pink: #fa0060;
+$black: #1d1b1b;
 $small: 1rem;
 $smedium: 1.2rem;
 $medium: 1.5rem;
 $large: 2rem;
 
 @font-face {
-    font-family: 'Surt';
-    src: url('/fonts/Surt-Regular.woff2') format('woff2'),
-         url('/fonts/Surt-Regular.woff') format('woff');
+    font-family: "Surt";
+    src: url("/fonts/Surt-Regular.woff2") format("woff2"), url("/fonts/Surt-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Surt';
-    src: url('/fonts/Surt-RegularOblique.woff2') format('woff2'),
-         url('/fonts/Surt-RegularOblique.woff') format('woff');
+    font-family: "Surt";
+    src: url("/fonts/Surt-RegularOblique.woff2") format("woff2"), url("/fonts/Surt-RegularOblique.woff") format("woff");
     font-weight: normal;
     font-style: oblique;
     font-display: swap;
 }
 
-html{
+html {
     background-color: $grey;
-    font-family: 'Surt';
+    font-family: "Surt";
     font-style: normal;
     font-size: 16px;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  text-align: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    text-align: center;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 p {
     margin: 0px;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
-.button{
+.button {
     font-size: $small;
     border-radius: 50px;
     border-style: solid;
@@ -67,15 +65,15 @@ button{
     color: $black;
     transition: color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003), background-color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003);
 }
-.button:hover{
+.button:hover {
     background-color: $black;
     color: $grey;
 }
 
-.navButton{
+.navButton {
     margin-right: 1rem;
 }
-#Container{
+#Container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -83,37 +81,32 @@ button{
     height: 100%;
 }
 
-.selectable{
+.selectable {
     margin-right: 1rem;
 }
 
-.selectable:last-of-type{
+.selectable:last-of-type {
     margin-right: 0rem;
 }
-#Page{
-
+#Page {
     height: 100%;
     width: 100%;
     padding: 3%;
 }
 
-
-
-#AnswerArea{
+#AnswerArea {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
     min-height: 35%;
 
-
-
-    .answerbox{
+    .answerbox {
         border-style: solid;
         border-width: 1px;
         border-right: none;
         border-color: $black;
-        width:25%;
+        width: 25%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -122,7 +115,7 @@ button{
         padding-bottom: 1rem;
         border-top: none;
 
-        .quizbutton{
+        .quizbutton {
             font-size: $small;
             border-radius: 50px;
             border-style: solid;
@@ -133,39 +126,38 @@ button{
             color: $black;
             transition: color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003), background-color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003);
         }
-        .quizbutton:hover{
+        .quizbutton:hover {
             color: $pink;
             border-color: $pink;
         }
-        .nonButton{
+        .nonButton {
             pointer-events: none;
             border-width: 0px;
 
             transition: color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003), background-color 0.3 cubic-bezier(0.854, 0.681, 0, 1.003);
         }
-        .nonButton:hover{
+        .nonButton:hover {
             color: $black;
             border-color: $pink;
         }
     }
-    
-    .answerbox:last-of-type{
+
+    .answerbox:last-of-type {
         border-right: solid;
         border-width: 1px;
         border-color: $black;
     }
-
 }
 
-#BindingBox{
+#BindingBox {
     max-height: 30vh;
     overflow-y: scroll;
-    .bound{
+    .bound {
         margin-top: 1rem;
     }
 }
 
-#NavArea{
+#NavArea {
     min-height: 10%;
     display: flex;
     flex-direction: row;
@@ -173,40 +165,40 @@ button{
     align-items: stretch;
 }
 
-#Title{
-    margin:0px;
+#Title {
+    margin: 0px;
     font-size: 2rem;
 }
 
-#QuestionArea{
-    min-height:10%;
+#QuestionArea {
+    min-height: 10%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    #QuesTextArea{
+    #QuesTextArea {
         margin-top: 1rem;
     }
-    #QuesNumText{
+    #QuesNumText {
         font-size: $small;
     }
-    #QuesTextText{
+    #QuesTextText {
         font-size: $medium;
     }
 }
-#Buffer.single{
+#Buffer.single {
     min-height: 5%;
 }
-#Buffer.double{
+#Buffer.double {
     min-height: 10%;
 }
 
-#PeopleArea{
+#PeopleArea {
     min-height: 15%;
     background-color: $pink 0.1;
 }
 
-#TopAnswerArea{
+#TopAnswerArea {
     // min-height: 5%;
     display: flex;
     flex-direction: row;
@@ -214,9 +206,9 @@ button{
     align-items: stretch;
     position: relative;
     z-index: 1001;
-    .comment{
+    .comment {
         width: 100%;
-        margin:auto;
+        margin: auto;
         height: 30vh;
         background-color: $grey;
         outline: none;
@@ -224,32 +216,31 @@ button{
         border-width: 1px;
         border-style: solid;
         resize: none;
-        padding:1rem;
+        padding: 1rem;
         font-size: $smedium;
-        font-family: 'Surt';
+        font-family: "Surt";
     }
 
-    #OtherAnswers{
+    #OtherAnswers {
         width: 100%;
-        margin:auto;
+        margin: auto;
         height: 30vh;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        #OtherAns{
+        #OtherAns {
             text-align: center;
             font-size: $medium;
             color: $pink;
         }
-
     }
 
-    .characterCount    {
+    .characterCount {
         margin-bottom: 1rem;
         font-style: oblique;
     }
-    .topanswerbox{
+    .topanswerbox {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -258,16 +249,16 @@ button{
         border-width: 1px;
         border-right: none;
         border-color: $black;
-        width:50%;
+        width: 50%;
         min-height: 100%;
-        padding:10px;
+        padding: 10px;
     }
-    .topanswerbox:last-of-type{
+    .topanswerbox:last-of-type {
         border-right: solid;
         border-width: 1px;
         border-color: $black;
     }
-    #IntroTextArea{
+    #IntroTextArea {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -275,18 +266,17 @@ button{
         margin: auto;
         width: 70%;
         margin-top: -2vh;
-        #IntroTextText{
+        #IntroTextText {
             font-size: $smedium;
             margin-bottom: 1rem;
             text-align: center;
         }
-        #HiddenText{
+        #HiddenText {
             font-size: $smedium;
             margin-bottom: 1rem;
             text-align: center;
-
         }
-        #IntroLinkText{
+        #IntroLinkText {
             font-size: $smedium;
             margin-bottom: 1rem;
             text-align: center;
@@ -295,20 +285,20 @@ button{
             margin-bottom: 1rem;
             cursor: pointer;
         }
-        #summaryText{
+        #summaryText {
             max-height: 50vh;
             overflow-y: auto;
         }
-        .comment.small{
+        .comment.small {
             max-height: 15vh;
             margin-bottom: 1rem;
         }
-        .comment.small:last-of-type{
+        .comment.small:last-of-type {
             margin-bottom: 0rem;
         }
-        #ButtonBox{
+        #ButtonBox {
             margin-bottom: 2rem;
-            .buttonLike{
+            .buttonLike {
                 font-size: $small;
                 border-radius: 50px;
                 border-style: solid;
@@ -319,15 +309,15 @@ button{
                 color: $black;
                 margin-left: 1rem;
             }
-            .buttonLike:focus{
+            .buttonLike:focus {
                 border-color: $pink;
                 outline: none;
             }
-            .butselected{
+            .butselected {
                 border-color: $pink;
                 color: $pink;
             }
-            .miniTextArea{
+            .miniTextArea {
                 margin-top: 1rem;
                 width: 100%;
                 display: flex;
@@ -337,51 +327,45 @@ button{
                 font-style: oblique;
                 font-size: $small;
             }
-         
         }
-
-    }    
+    }
 }
 
-
 .os-scrollbar-handle {
-background-color: #3d405b !important;
+    background-color: #3d405b !important;
 }
 
 .os-scrollbar.os-scrollbar-vertical {
-border-radius: 8px;
-width: 16px;
-background-color: #f2cc8f;
-padding: 0px;
-z-index: 99999;
-top: 20px !important;
-bottom: 20px !important;
+    border-radius: 8px;
+    width: 16px;
+    background-color: #f2cc8f;
+    padding: 0px;
+    z-index: 99999;
+    top: 20px !important;
+    bottom: 20px !important;
 }
-  
 
-
-.nextButton{
+.nextButton {
     background-color: $black;
     color: $grey;
-    margin:auto;
+    margin: auto;
     margin-top: 2rem;
     margin-right: 1rem;
     margin-left: 1rem;
 }
-.nextButton:hover{
+.nextButton:hover {
     background-color: $pink;
     color: $black;
 }
-
 
 .dot {
     height: auto;
     position: absolute;
     overflow: visible;
-    max-width:6vw;
+    max-width: 6vw;
     transform: translate(-50%, -50%);
     transform-origin: 50% 100%;
-    transition-timing-function: cubic-bezier(.45,.05,.55,.95);
+    transition-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
     transition-property: transform, top, left;
     pointer-events: auto;
     will-change: transform, top, left;
@@ -398,37 +382,70 @@ svg {
     transform: scale(1, 1);
     //display: block;
     overflow: visible;
-
 }
-.hidden{
+.hidden {
     display: none !important;
 }
-.pink{
+.pink {
     color: $pink !important;
 }
 
-.pink2{
+.pink2 {
     color: $pink !important;
 }
 
-.pinkdot > svg:nth-child(1) > g:nth-child(2) > g:nth-child(1) > path:nth-child(2){
-    fill:$pink !important;
+.pinkdot > svg:nth-child(1) > g:nth-child(2) > g:nth-child(1) > path:nth-child(2) {
+    fill: $pink !important;
 }
+#MobOnly {
+    display: none;
+}
+
 @media only screen and (max-width: 760px) {
-    #some-element { 
-        display: none; 
+    .desk {
+        display: none !important;
+    }
+
+    .dot {
+        display: none !important;
+    }
+    #Nav {
+        display: none !important;
+    }
+    #NavArea {
+        justify-content: center;
+        min-height: auto;
+    }
+    #Container {
+        justify-content: center;
+    }
+    #MobOnly {
+        display: block;
+        padding: 0px 5vw;
+        margin-top: 2rem;
+
+        #ButtonBox {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .button {
+                margin-top: 1rem;
+            }
+        }
     }
 }
 
-.cls-1{
-    fill-opacity: 0.1 ;
-    fill:$black;
+.cls-1 {
+    fill-opacity: 0.1;
+    fill: $black;
 }
 .cls-2 {
-  fill:$black;
-  stroke: $grey;
+    fill: $black;
+    stroke: $grey;
 }
 
 .cls-3 {
-  fill: $grey;
+    fill: $grey;
 }

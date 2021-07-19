@@ -157,33 +157,31 @@ function setUpQuestion() {
         longestTime = 0;
     }
 
-        if (Qnumber < 9) {
-            SectionName.innerHTML = "Values";
-            SectionTotQues.innerHTML = "25";
-        } else {
-            SectionName.innerHTML = "Scenarios";
-            SectionTotQues.innerHTML = "25";
-        }
-        AnsButs = document.getElementsByClassName("quizbutton");
-        NextQButton.classList.add("hidden");
+    if (Qnumber < 9) {
+        SectionName.innerHTML = "Values";
+        SectionTotQues.innerHTML = "25";
+    } else {
+        SectionName.innerHTML = "Scenarios";
+        SectionTotQues.innerHTML = "25";
+    }
+    AnsButs = document.getElementsByClassName("quizbutton");
+    NextQButton.classList.add("hidden");
 
-        setTimeout(function () {
-            TopAns1.classList.remove("pink2");
-            TopAns2.classList.remove("pink2");
-            for (let i = 0; i < AnsButs.length; i++) {
-                AnsButs[i].classList.remove("pink");
-    
-            }
-            SectionQuesNum.innerHTML = AllQuestions[Qnumber][0];
-            QuesTextText.innerHTML = AllQuestions[Qnumber][1];
-            TopAns1.innerHTML = AllQuestions[Qnumber][2];
-            TopAns2.innerHTML = AllQuestions[Qnumber][3];
-        }, (longestTime / 2) * 1000);
-    
+    setTimeout(function () {
+        TopAns1.classList.remove("pink2");
+        TopAns2.classList.remove("pink2");
+        for (let i = 0; i < AnsButs.length; i++) {
+            AnsButs[i].classList.remove("pink");
+        }
+        SectionQuesNum.innerHTML = AllQuestions[Qnumber][0];
+        QuesTextText.innerHTML = AllQuestions[Qnumber][1];
+        TopAns1.innerHTML = AllQuestions[Qnumber][2];
+        TopAns2.innerHTML = AllQuestions[Qnumber][3];
+    }, (longestTime / 2) * 1000);
 }
 
 function Answer4(ans) {
-    console.log('record', ans)
+    console.log("record", ans);
     // Do things to show results
     ///NextQButton.classList.remove('hidden');
     AnsButs = document.getElementsByClassName("quizbutton");
@@ -208,15 +206,15 @@ function Answer4(ans) {
 function NextQBut() {
     Qnumber++;
     reset();
-    if (Qnumber > 19) {
+    if (Qnumber > 12) {
         setUpOpenQuestions(OpenQuesArea1);
-    } else{
+    } else {
         gsap.to(QuestionArea, { duration: longestTime / 2, opacity: 0 });
         gsap.to(TopAnswerArea, { duration: longestTime / 2, opacity: 0 });
         gsap.to(AnswerArea, { duration: longestTime / 2, opacity: 0 });
-    
+
         setUpQuestion();
-    
+
         setTimeout(function () {
             gsap.to(QuestionArea, { duration: longestTime / 2, opacity: 1 });
             gsap.to(TopAnswerArea, { duration: longestTime / 2, opacity: 1 });
@@ -226,10 +224,9 @@ function NextQBut() {
         setTimeout(function () {
             for (let i = 0; i < AnsButs.length; i++) {
                 AnsButs[i].classList.remove("nonButton");
-            }        }, (longestTime ) * 1000);
-
+            }
+        }, longestTime * 1000);
     }
-
 }
 
 function recordAnswer(ans) {
@@ -303,9 +300,9 @@ function openButAnswer() {
     }
 }
 
-function NextOpenQuestion(OpenQuesArea2) {
+function NextOpenQuestion(Area) {
     OpenQnumber++;
-    setUpOpenQuestions(OpenQuesArea2);
+    setUpOpenQuestions(Area);
 }
 
 function loadSummary() {
@@ -316,7 +313,11 @@ function loadSummary() {
     builder(SummaryArea);
     let ValsummaryText = "";
     let ScesummaryText = "";
-    let OpesummaryText = "";
+    let OpesummaryText1 = "";
+    let OpesummaryText2 = "";
+    let OpesummaryText3 = "";
+    let OpesummaryText4 = "";
+    let OpesummaryText5 = "";
     let addText = " ";
     let x = 0;
     for (var prop in allAnswers) {
@@ -324,22 +325,29 @@ function loadSummary() {
         if (Object.prototype.hasOwnProperty.call(allAnswers, prop) && x > 2 && x < 11) {
             ValsummaryText += allAnswers[prop];
             ValsummaryText += addText;
-        } else if (Object.prototype.hasOwnProperty.call(allAnswers, prop) && x > 11 && x < 23) {
+        } else if (Object.prototype.hasOwnProperty.call(allAnswers, prop) && x > 11 && x < 16) {
             ScesummaryText += allAnswers[prop];
             ScesummaryText += addText;
-        } else if (Object.prototype.hasOwnProperty.call(allAnswers, prop) && x == 23) {
-            OpesummaryText += "When asked what you want your future Art school to be known for, you said: ";
-            OpesummaryText += allAnswers[prop];
-            OpesummaryText += addText;
-        } else if (Object.prototype.hasOwnProperty.call(allAnswers, prop) && x == 24) {
-            OpesummaryText += "When asked what you would do in your first 100 days as director of your future Art School, you said: ";
-            OpesummaryText += allAnswers[prop];
-        }
+        } else if (Object.prototype.hasOwnProperty.call(allAnswers, prop) && x == 16) {
+            OpesummaryText1 += allAnswers[prop];
+        } else if (Object.prototype.hasOwnProperty.call(allAnswers, prop) && x == 17) {
+            OpesummaryText2 += allAnswers[prop];
+        } else if (Object.prototype.hasOwnProperty.call(allAnswers, prop) && x == 18) {
+            OpesummaryText3 += allAnswers[prop];
+        } else if (Object.prototype.hasOwnProperty.call(allAnswers, prop) && x == 19) {
+            OpesummaryText4 += allAnswers[prop];
+        } else if (Object.prototype.hasOwnProperty.call(allAnswers, prop) && x == 20) {
+            OpesummaryText5 += allAnswers[prop];
+        } 
     }
     setTimeout(function () {
         document.getElementById("ValsummaryText").innerText = ValsummaryText;
         document.getElementById("ScesummaryText").innerText = ScesummaryText;
-        document.getElementById("OpesummaryText").innerText = OpesummaryText;
+        document.getElementById("OpesummaryText1").innerText = OpesummaryText1;
+        document.getElementById("OpesummaryText2").innerText = OpesummaryText2;
+        document.getElementById("OpesummaryText3").innerText = OpesummaryText3;
+        document.getElementById("OpesummaryText4").innerText = OpesummaryText4;
+        document.getElementById("OpesummaryText5").innerText = OpesummaryText5;
     }, (longestTime / 2) * 1000);
 }
 
@@ -361,20 +369,18 @@ function saveFears() {
     loadSummary();
 }
 function endPage(HTML) {
-    longestTime =0.5;
+    longestTime = 0.5;
     builder(HTML);
     document.getElementById("HiddenIntro").classList.add("hidden");
 }
 //Copy text on summary
 function copy() {
-
-
     var range = document.createRange();
     range.selectNode(document.getElementById("BindingBox"));
     window.getSelection().removeAllRanges(); // clear current selection
     window.getSelection().addRange(range); // to select text
     document.execCommand("copy");
-    window.getSelection().removeAllRanges();// to deselect
+    window.getSelection().removeAllRanges(); // to deselect
 }
 
 //Charcter Limiter
