@@ -9,7 +9,7 @@ let AllQuestions = [
         "a small student population",
         "believe Art School should",
         "have big student populations.",
-        "have small student populations.",
+        "have small student populations."
     ],
     [
         4,
@@ -19,9 +19,9 @@ let AllQuestions = [
         "Your future Art School believes",
         "in stand-alone disciplines",
         "in interdisciplinarity",
-        "believe Art School should ",
+        "believe Art School should",
         "have stand-alone disciplines. ",
-        "be interdisciplinary. ",
+        "be interdisciplinary. "
     ],
     [
         5,
@@ -33,7 +33,7 @@ let AllQuestions = [
         "learning throughout a lifetime",
         "believe Art School students should be",
         "kick-starting a career.",
-        "learning throughout a lifetime.",
+        "learning throughout a lifetime."
     ],
     [
         6,
@@ -43,9 +43,9 @@ let AllQuestions = [
         "Students at your future Art School are",
         "following a set curriculum",
         "building their own curriculum",
-        "believe Art School students should ",
+        "believe Art School students should",
         "follow a set curriculum.",
-        "build their own curriculum. ",
+        "build their own curriculum. "
     ],
     [
         7,
@@ -57,7 +57,7 @@ let AllQuestions = [
         "full-time academics",
         "believe Art School staff should be",
         "part-time whilst developing their own practice.",
-        "full-time academics.",
+        "full-time academics."
     ],
     [
         8,
@@ -67,9 +67,9 @@ let AllQuestions = [
         "Your future Art School is",
         "prioritising formal teaching",
         "prioritising peer learning",
-        "believe Art School should ",
+        "believe Art School should",
         "prioritise formal teaching.",
-        "prioritise peer learning. ",
+        "prioritise peer learning. "
     ],
     [
         9,
@@ -79,9 +79,9 @@ let AllQuestions = [
         "Your future Art School is",
         "prioritising online learning",
         "prioritising in-person learning",
-        "believe Art School should ",
+        "believe Art School should",
         "prioritise online learning.",
-        "prioritise in-person learning.",
+        "prioritise in-person learning."
     ],
     [
         10,
@@ -91,9 +91,9 @@ let AllQuestions = [
         "Your future Art School is",
         "all over the world",
         "embedded in one place",
-        "believe Art School should be ",
+        "believe Art School should be",
         "global. ",
-        "place-based. ",
+        "place-based. "
     ],
     [
         11,
@@ -103,9 +103,9 @@ let AllQuestions = [
         "Your future Art School is",
         "historic and traditional",
         "emergent and dynamic",
-        "believe Art School should be ",
+        "believe Art School should be",
         "historic and traditional.",
-        "emergent and dynamic. ",
+        "emergent and dynamic. "
     ],
     [
         12,

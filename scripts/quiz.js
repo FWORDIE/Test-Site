@@ -160,10 +160,10 @@ function setUpQuestion() {
     }
 
     if (Qnumber < 9) {
-        SectionName.innerHTML = "Values";
+        SectionName.innerHTML = "";
         SectionTotQues.innerHTML = "22";
     } else {
-        SectionName.innerHTML = "Scenarios";
+        SectionName.innerHTML = "";
         SectionTotQues.innerHTML = "22";
     }
     AnsButs = document.getElementsByClassName("quizbutton");

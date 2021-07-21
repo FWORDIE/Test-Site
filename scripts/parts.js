@@ -27,7 +27,7 @@ let IntroTextArea = `
 `;
 
 let DemoArea1 = [
-    "Introduction",
+    "",
     "1",
     "22",
     "What’s your involvement with GSA?",
@@ -51,7 +51,7 @@ let DemoArea1 = [
 ];
 
 let DemoArea2 = [
-    "Introduction",
+    "",
     "2",
     "22",
     "If applicable, what school(s) have you/are you associated with?",
@@ -76,7 +76,7 @@ let DemoArea2 = [
 ];
 
 let OpenQuesArea1 = [
-    "Open Questions",
+    "",
     "17",
     "22",
     "I want my future Art School to be known for...",
@@ -97,7 +97,7 @@ let OpenQuesArea1 = [
 ];
 
 let OpenQuesArea2 = [
-    "Open Questions",
+    "",
     "18",
     "22",
     "In my first 100 days as director of my future Art School I would…",
@@ -117,7 +117,7 @@ let OpenQuesArea2 = [
 ];
 
 let OpenQuesArea3 = [
-    "Open Questions",
+    "",
     "19",
     "22",
     "My future Art School will nurture…",
@@ -138,7 +138,7 @@ let OpenQuesArea3 = [
 ];
 
 let OpenQuesArea4 = [
-    "Open Questions",
+    "",
     "20",
     "22",
     "My future Art School will provide students with the following added value once they graduate…",
@@ -158,7 +158,7 @@ let OpenQuesArea4 = [
 ];
 
 let OpenQuesArea5 = [
-    "Open Questions",
+    "",
     "21",
     "22",
     "My future Art School will attract staff to work at it by…",
@@ -179,8 +179,8 @@ let OpenQuesArea5 = [
 
 let SummaryArea = [
     "Your Summary",
-    "1",
-    "3",
+    "",
+    "",
     "Here is a summary of your Art School of the future.",
     "",
     "",
@@ -238,8 +238,8 @@ These questions are confidential, they won’t appear anywhere on the site after
 
 let EndArea = [
     "End",
-    "3",
-    "3",
+    "",
+    "",
     "That's everything",
     "",
     "",
