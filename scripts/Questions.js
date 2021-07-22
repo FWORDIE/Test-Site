@@ -111,50 +111,50 @@ let AllQuestions = [
         12,
         "Your Art School has identified widening participation as a key priority area. Do you...",
         "Maintain the current course structures but increase the availability of financial support",
-        "Introduce more flexible part-time and distance learning options ",
-        "You approach widening participation by ",
+        "Introduce more flexible part-time and distance learning options",
+        "You approach widening participation by",
         "maintaining the current course structures but increasing the availability of financial support.",
         "introducing more flexible part-time and distance learning options. ",
         "said they would approach widening participation by",
         "maintaining the current course structures but increasing the availability of financial support.",
-        "introducing more flexible part-time and distance learning options. ",
+        "introducing more flexible part-time and distance learning options. "
     ],
     [
         13,
         "You wish to improve diversity at your future Art School. Do you… ",
         "Prioritise support for a more diverse student population",
         "Prioritise constructing a decolonial curriculum",
-        "To improve diversity you prioritise ",
+        "To improve diversity you prioritise",
         "supporting a more diverse student population.",
         "constructing a decolonial curriculum.",
-        "said they would prioritise ",
+        "said they would prioritise",
         "supporting a more diverse student population.",
-        "constructing a decolonial curriculum.",
+        "constructing a decolonial curriculum."
     ],
     [
         14,
-        "You want your future Art School to give students the best opportunities to work on projects with external partners. Do you...",
+        "You want your future Art School to give students opportunities to work on projects with external partners. Do you...",
         "Curate a limited number of large institutional partnerships",
         "Enable many smaller, locally sourced and negotiated projects",
-        "You offer students the opportunity to work with external partners by ",
+        "You offer students the opportunity to work with external partners by",
         "curating a limited number of large institutional partnerships.",
         "enabling many smaller, locally sourced and negotiated projects.",
-        "said they would ",
+        "said they would",
         "curate a limited number of large institutional partnerships.",
-        "enable many smaller, locally sourced and negotiated projects.",
+        "enable many smaller, locally sourced and negotiated projects."
     ],
     [
         15,
         "Your future art school wants to develop new areas of academic excellence. Do you...",
         "Hire several early-career academics to develop them and build a reputation over time",
         "Hire a small number of leading discipline specialists to develop them more quickly",
-        "In order to develop new areas of academic excellence, you decide to ",
+        "In order to develop new areas of academic excellence, you decide to",
         "hire several early-career academics to develop them and build a reputation over time.",
         "hire a small number of leading discipline specialists to develop them more quickly.",
-        "said they would ",
+        "said they would",
         "hire several early-career academics to develop them and build a reputation over time.",
-        "hire a small number of leading discipline specialists to develop them more quickly.",
-    ],
+        "hire a small number of leading discipline specialists to develop them more quickly."
+    ]
 ];
 
 let OpenQuestions = [
@@ -177,17 +177,27 @@ let OpenAnswers = [
         "Emergence and Flexibility",
         "student engagement and interaction, providing resource and opportunity, equipping students with knowledge, and a practical and theoretical skillset",
         "Being an inclusive place embedded in its community where people can learn with and from other practitioners across a variety of skills and interests",
-        "collaboration, progressive thinking, high standard of graduates and functionality. ",
-        "developing creative, critical and ethical thinker-makers.",
+        "collaboration, progressive thinking, high standard of graduates and functionality. ",
+        "developing creative, critical and ethical thinker-makers."
     ],
     [
-        "always outward",
-        "Working together, questioning everything, helping us all",
-        "GSA a community for the worlds best creative minds",
-        "To capitalise upon a students existing knowledge alongside providing opportunities to make interdisciplinary collaborations to create dynamic graduates that would be ready to enter the design market",
-        "Fuck the default",
-        "Change mindsets, change action",
-        "equipping students with confidence in their own practice and the ability to utilise what they have learned",
-        "Changing Conventions ",
+        "Trial a new interdisciplinary programme, develop new partnerships with civic organisations and set up residencies for students in and around the city.",
+        "Establish good wellbeing services for staff and students, and build the school system to nurture sustainability and post colonial education around flexible course structures.",
+        "Evolve organisational structure to create flatter hierarchies  - an Art School that is governed first and foremost by those involved in teaching and learning. "
     ],
+    [
+        "Pragmatism - students will learn to engage people across society, meeting people where they are, and understanding how best to make impact.",
+        "An understanding and a connection to the society they live in through creative practices",
+        "Be self-reflexive practitioners and socially conscious thinkers, learning collaboratively through engaging with ideas, materials, people and place."
+    ],
+    [
+        "Students will not only have had a space to develop critical thinking and craft, but they will also have experience of working with a range of third party orgs — they will be contextually aware, and able to understand the value of their work.",
+        "Throughout the time in study students have had the opportunity to partner with organisations - either self organised or planned on small scale - and therefore have a level of confidence in what they want to do and where they want to go next",
+        "Access to resources (libraries, workshops, studio space) that supports sharing of knowledge, skills and initiating projects with others. Enabling a self-organised, peer-led model of education. "
+    ],
+    [
+        "Being a melting pot. There will be no full time teaching staff — all staff will be practising. Staff will be attracted by the network of other staff members, and the opportunity to share and learn from each other.",
+        "The opportunity to share knowledge and learn at the same time. Staff have the time to practice and develop their practice in the side either within or outwith the school. The hierarchy between staff and students would be reduced due to the varied demographic of the student body.",
+        "Time, resource and agency to develop their practise. Participants of the school are both learners and teachers. "
+    ]
 ];

@@ -443,6 +443,10 @@ button {
   font-size: 1rem;
 }
 
+#TopAnswerArea #IntroTextArea #ButtonBox .button {
+  margin: 0.5rem 0.5rem;
+}
+
 .os-scrollbar-handle {
   background-color: #3d405b !important;
 }

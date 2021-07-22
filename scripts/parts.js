@@ -246,10 +246,10 @@ let EndArea = [
     `
 <div id="IntroTextArea">
 <p id="IntroTextText">Thank you so much for your help in shaping the future of the GSA. If you want to continue the conversation, you can sign up to workshops that are taking place in August. 
-You can follow along with the project by going to <a id="IntroLinkText" href="https://www.thefutureofgsa.com/">thefutureofgsa.com</a>
+You can follow along with the project by going to <a id="IntroLinkText" href="https://www.thefutureofgsa.com/" target="_blank" rel="noopener noreferrer">thefutureofgsa.com</a>
 </p>
 <div id="ButtonBox">
-    <button class="button " id="NextButtonCopy" onclick="location.href='https://www.thefutureofgsa.com">Learn more about the project</button>
+    <a href="https://www.thefutureofgsa.com/" target="_blank" rel="noopener noreferrer"> <button class="button " id="NextButtonCopy" >Learn more about the project</button></a>
     <a href="mailto:questions@thefutureofgsa.com?subject=Rethinking%20GSA%20%E2%80%94%20question%20suggestion&body=Here%20is%20the%20question%20I%20would%20suggest%20to%20add%20to%20the%20survey%3A%20%0A%0A%0AThe%20reason%20I%20think%20it%20should%20be%20added%20is%3A%20%0A"><button class="button">Submit a question</button></a>
     </div>
 </div>
