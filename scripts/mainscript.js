@@ -1,7 +1,5 @@
 var Logger = true;
-var faunadb;
-var q;
-var client;
+
 // When Page Loads
 document.onload = pageSetUp();
 
@@ -11,6 +9,9 @@ function pageSetUp() {
     loadLotties();
     let readywidth = document.getElementById("no47").offsetHeight;
     wait(readywidth, 0);
+    let faunadb;
+let q;
+let client;
     fetch(".netlify/functions/api")
     .then(response => response.json())
     .then(json => {
