@@ -1,9 +1,7 @@
 // Get all question answers, put them into an array [Qnum, Ans_1, Ans_2 ...]
 // Get all long form answers from two seperate collections and put them into an array
 
-var faunadb;
-var q;
-var client;
+
 
 let serverURL;
 

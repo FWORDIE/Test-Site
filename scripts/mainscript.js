@@ -1,5 +1,7 @@
 var Logger = true;
-
+var faunadb;
+var q;
+var client;
 // When Page Loads
 document.onload = pageSetUp();
 
@@ -21,7 +23,18 @@ function pageSetUp() {
         });
 
     }).then(
-       function GetDataBase(){}
+       function GetDataBase(){
+        NoCalls++;
+        logger("GetDataBase", `Calls: ${NoCalls}, Posts: ${NoPosts}`);
+        client
+            .query(q.Paginate(q.Match(q.Index("GetAllAns"))))
+    
+            .then((ret) => {
+                Answers = ret.data;
+                logger("GetDataBase", Answers);
+            })
+            .catch((err) => console.error("Error: %s", err));
+       }
     );
     //FadeIn();
 }
