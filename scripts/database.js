@@ -32,6 +32,18 @@ let NoPosts = 0;
 // });
 
 function GetDataBase() {
+    fetch(".netlify/functions/api")
+    .then(response => response.json())
+    .then(json => {
+        faunadb = window.faunadb;
+        q = faunadb.query;
+        client = new faunadb.Client({
+            secret: json.api,
+            domain: "db.fauna.com",
+            scheme: "https",
+        });
+
+    });
     NoCalls++;
     logger("GetDataBase", `Calls: ${NoCalls}, Posts: ${NoPosts}`);
     client
@@ -46,6 +58,18 @@ function GetDataBase() {
 
 // Update Fauna DataBase
 function UpdateDataBase(Num, Answer) {
+    fetch(".netlify/functions/api")
+    .then(response => response.json())
+    .then(json => {
+        faunadb = window.faunadb;
+        q = faunadb.query;
+        client = new faunadb.Client({
+            secret: json.api,
+            domain: "db.fauna.com",
+            scheme: "https",
+        });
+
+    });
     NoPosts++;
     logger("GetDataBase", `Calls: ${NoCalls}, Posts: ${NoPosts}`);
     if (Answer == 0) {
