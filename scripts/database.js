@@ -7,7 +7,7 @@ var client;
 
 let serverURL;
 
-    fetch(".netlify/functions/api.js")
+    fetch(".netlify/functions/api")
     .then(response => response.json())
     .then(json => {
         faunadb = window.faunadb;
