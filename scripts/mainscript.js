@@ -11,6 +11,7 @@ function pageSetUp() {
     wait(readywidth, 0);
     let faunadb;
     let q;
+    console.log(client); 
     let client;
     fetch(".netlify/functions/api")
         .then((response) => response.json())
@@ -35,6 +36,8 @@ function pageSetUp() {
                 })
                 .catch((err) => console.error("Error: %s", err));
         });
+        console.log(client); 
+
     //FadeIn();
 }
 
