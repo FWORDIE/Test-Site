@@ -1,9 +1,9 @@
 // Get all question answers, put them into an array [Qnum, Ans_1, Ans_2 ...]
 // Get all long form answers from two seperate collections and put them into an array
 
-const faunadb;
-const q;
-const client;
+var faunadb;
+var q;
+var client;
 
 let serverURL;
 
@@ -18,7 +18,7 @@ let serverURL;
             scheme: "https",
         });
 
-    })
+    });
 
 // // Load Fauna Stuff
 let NoCalls = 0;
