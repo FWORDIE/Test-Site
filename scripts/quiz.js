@@ -186,7 +186,7 @@ function setUpQuestion() {
 
 function Answer4(ans) {
     console.log("record", ans);
-    UpdateDataBase(Qnumber, ans);
+    UpdateDataBase((Qnumber+3), ans);
     // Do things to show results
     ///NextQButton.classList.remove('hidden');
     AnsButs = document.getElementsByClassName("quizbutton");
