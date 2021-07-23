@@ -46,6 +46,7 @@ function UpdateDataBase(Num, Answer) {
         });
     })
     .then(function UpdateDataBase(Num, Answer)  {
+        console.log(Num, Answer)
         NoPosts++;
     logger("GetDataBase", `Calls: ${NoCalls}, Posts: ${NoPosts}`);
     if (Answer == 0) {
