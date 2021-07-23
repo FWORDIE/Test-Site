@@ -4,12 +4,12 @@ var Logger = true;
 document.onload = pageSetUp();
 
 // Page Load Function
-function pageSetUp() {
+async function pageSetUp() {
     generateStartingGrid();
     loadLotties();
     let readywidth = document.getElementById("no47").offsetHeight;
     wait(readywidth, 0);
-    GetDataBase();
+    await GetDataBase();
     //FadeIn();
 }
 
