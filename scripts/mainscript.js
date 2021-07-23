@@ -4,12 +4,25 @@ var Logger = true;
 document.onload = pageSetUp();
 
 // Page Load Function
-async function pageSetUp() {
+function pageSetUp() {
     generateStartingGrid();
     loadLotties();
     let readywidth = document.getElementById("no47").offsetHeight;
     wait(readywidth, 0);
-    await GetDataBase();
+    fetch(".netlify/functions/api")
+    .then(response => response.json())
+    .then(json => {
+        faunadb = window.faunadb;
+        q = faunadb.query;
+        client = new faunadb.Client({
+            secret: json.api,
+            domain: "db.fauna.com",
+            scheme: "https",
+        });
+
+    }).then(
+       function GetDataBase(){}
+    );
     //FadeIn();
 }
 
