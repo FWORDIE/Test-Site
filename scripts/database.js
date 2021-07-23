@@ -5,19 +5,6 @@
 
 let serverURL;
 
-    fetch(".netlify/functions/api")
-    .then(response => response.json())
-    .then(json => {
-        faunadb = window.faunadb;
-        q = faunadb.query;
-        client = new faunadb.Client({
-            secret: json.api,
-            domain: "db.fauna.com",
-            scheme: "https",
-        });
-
-    });
-
 // // Load Fauna Stuff
 let NoCalls = 0;
 let NoPosts = 0;
