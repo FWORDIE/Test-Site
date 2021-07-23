@@ -32,6 +32,8 @@ function GetDataBase() {
 // Update Fauna DataBase
 
 function UpdateDataBase(Num, Answer) {
+    var Num = Num;
+    var Answer = Answer;
     fetch(".netlify/functions/api")
     .then((response) => response.json())
     .then((json) => {
