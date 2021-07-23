@@ -3,15 +3,16 @@ var Logger = true;
 // When Page Loads
 document.onload = pageSetUp();
 
+var faunadb;
+var q;
+var client;
 // Page Load Function
 function pageSetUp() {
     generateStartingGrid();
     loadLotties();
     let readywidth = document.getElementById("no47").offsetHeight;
     wait(readywidth, 0);
-    let faunadb;
-    let q;
-    let client;
+
     fetch(".netlify/functions/api")
         .then((response) => response.json())
         .then((json) => {
