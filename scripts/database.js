@@ -45,7 +45,7 @@ function UpdateDataBase(Num, Answer) {
             scheme: "https",
         });
     })
-    .then(function UpdateDataBase(Num, Answer)  {
+    .then(function (Num, Answer)  {
         console.log(Num, Answer)
         NoPosts++;
     logger("GetDataBase", `Calls: ${NoCalls}, Posts: ${NoPosts}`);
