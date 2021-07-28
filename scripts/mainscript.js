@@ -1,4 +1,4 @@
-var Logger = true;
+var Logger = false;
 
 // When Page Loads
 document.onload = pageSetUp();

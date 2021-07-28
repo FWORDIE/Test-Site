@@ -3,12 +3,12 @@ function genPcents(Qnumber) {
     let total = 0;
     for (let i = 0; i < 4; i++) {
         total += Answers[Qnumber][i + 1];
-        console.log("total", total);
+        // console.log("total", total);
     }
     for (let i = 0; i < 4; i++) {
         pCentArray[i] = Number(((Answers[Qnumber][i + 1] / total) * 100).toFixed(1));
     }
-    console.log("pCent", pCentArray);
+    // console.log("pCent", pCentArray);
     return pCentArray;
 }
 
@@ -23,9 +23,9 @@ function topAnsFunc(ansArr) {
 }
 
 function answer(ans) {
-    console.log("before", Answers[Qnumber][ans + 1]);
+    // console.log("before", Answers[Qnumber][ans + 1]);
     Answers[Qnumber][ans + 1]++;
-    console.log("after", Answers[Qnumber][ans + 1]);
+    // console.log("after", Answers[Qnumber][ans + 1]);
     let ansArr = genPcents(Qnumber);
     let topAnsArr = topAnsFunc(ansArr);
         showTop(topAnsArr, Qnumber);

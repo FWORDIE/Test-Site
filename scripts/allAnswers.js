@@ -25,28 +25,28 @@ let allAnswers =
 // };
 
     {
-        "GSA_Involvement": "Staff",
+        "GSA_Involvement": "NA",
         "GSA_Association": [
-          "Architecture"
+          "NA"
         ],
-        "Values_1": "Your Art School believes completely in raw creativity.",
-        "Values_2": "Your Art School believes completely in stand alone disciplines.",
-        "Values_3": "Your Art School believes completely it’s role is to critique from the outside.",
-        "Values_4": "Students at your Art School are completely kick-starting a career.",
-        "Values_5": "Students at your Art School are completely ‘Jack of all trades’.",
-        "Values_6": "Students at your Art School are completely following a set curriculum.",
-        "Values_7": "Your Art School is completely focusing on improving digital resources.",
-        "Values_8": "Your Art School is completely for people all over the world.",
-        "Values_9": "Your Art School is completely historic and prestigious.",
-        "Scenarios_1": "When your Art School is losing money, you completely ask for donations.",
-        "Scenarios_2": "To improve your campus, you completely improve existing space.",
-        "Scenarios_3": "With an increased appetite for digital learning, you completely use digital learning to teach a diverse range of students around the world.",
-        "Scenarios_4": "Your admissions process is completely open to all, with big student cohorts.",
-        "Open_1": "I would make an international call for more artists to come and live here as part of the plan to make the area a world centre for art.",
-        "Open_2": "The creative industries are the future and only a very small % of the population is equipped to work in them. Art school equips people with the skills they need to compete in the creative industries of the future.",
-        "Open_3": "I would make an international call for more artists to come and live here as part of the plan to make the area a world centre for art.",
-        "Open_4": "The creative industries are the future and only a very small % of the population is equipped to work in them. Art school equips people with the skills they need to compete in the creative industries of the future.",
-        "Open_5": "I would make an international call for more artists to come and live here as part of the plan to make the area a world centre for art.",
-        "Hope": "",
-        "Fear": ""
+        "Values_1": "NA",
+        "Values_2": "NA",
+        "Values_3": "NA",
+        "Values_4": "NA",
+        "Values_5": "NA",
+        "Values_6": "NA",
+        "Values_7": "NA",
+        "Values_8": "NA",
+        "Values_9": "NA",
+        "Scenarios_1": "NA",
+        "Scenarios_2": "NA",
+        "Scenarios_3": "NA",
+        "Scenarios_4": "NA",
+        "Open_1": "NA",
+        "Open_2": "NA",
+        "Open_3": "NA",
+        "Open_4": "NA",
+        "Open_5": "NA",
+        "Hope": "NA",
+        "Fear": "NA"
       }

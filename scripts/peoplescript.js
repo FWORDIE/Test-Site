@@ -36,7 +36,7 @@ let speedDouble = false;
 let numOfDots = 48;
 let padding = 4 * (window.innerWidth / 100);
 
-//console.log(containerHeight, containerWidth);
+////console.log(containerHeight, containerWidth);
 
 //Check Mobile
 function Mobile() {
@@ -70,8 +70,8 @@ function Mobile() {
 
         is_small = true;
     }
-    //console.log(is_mobile)
-    //console.log('x:'+ x, 'y:'+ y, 'bx:'+ bx, 'by:'+ by )
+    ////console.log(is_mobile)
+    ////console.log('x:'+ x, 'y:'+ y, 'bx:'+ bx, 'by:'+ by )
 }
 
 // Test Button Show Results
@@ -82,7 +82,7 @@ function test3() {
 
 // Test Button Runaway
 function runaway() {
-    //console.log("Runway Start resultState " + resultState);
+    ////console.log("Runway Start resultState " + resultState);
     showResults(oldNum, true);
 }
 
@@ -155,7 +155,7 @@ function generateStartingGrid() {
             n++;
         }
     }
-    //console.log("generateStartingGrid: " + dotData)
+    ////console.log("generateStartingGrid: " + dotData)
 }
 const walkbeg = new Event("walkbeg");
 const walkend = new Event("walkend");
@@ -260,7 +260,7 @@ function movePeople(item, Arr, n, instant) {
     let xOffset = (dotData[item][3] / 2) * containerPercentageWidth;
     let yOffset = ((dotData[item][3] * dotData[item][8]) / 2) * containerPercentageWidth;
 
-    //console.log(xOffset,yOffset);
+    ////console.log(xOffset,yOffset);
     let xData = Arr[n][0] - xOffset;
     let yData = Arr[n][1] - yOffset;
     let oldX = dotData[item][0];
@@ -276,7 +276,7 @@ function movePeople(item, Arr, n, instant) {
     dotData[item][0] = xData;
     dotData[item][1] = yData;
     dotData[item][6] = (yData + 2 * yOffset).toFixed(0);
-    //console.log(dotData[item]);
+    ////console.log(dotData[item]);
 }
 
 // Get Random Number
@@ -305,7 +305,7 @@ function showResults(num, runaway, instant) {
             while (arr[round].length < amount && (arr[0].length + arr[1].length + arr[2].length) < numOfDots) {
                 var r = Math.floor(Math.random() * numOfDots);
                 if (arr[0].indexOf(r) === -1 && arr[1].indexOf(r) === -1 && arr[2].indexOf(r) === -1) arr[round].push(r);
-                console.log('doing', round, arr[round].length);
+                //console.log('doing', round, arr[round].length);
 
             }
         }
@@ -317,7 +317,7 @@ function showResults(num, runaway, instant) {
         }
     }
 
-    console.log(arr, tots);
+    //console.log(arr, tots);
 
     // // }
     var points = [[], [], [], []];
@@ -331,7 +331,7 @@ function showResults(num, runaway, instant) {
         }
     }
 
-    console.log(points);
+    //console.log(points);
 
     var bin = [[], [], [], []];
     longestTime = 0;
@@ -351,7 +351,7 @@ function showResults(num, runaway, instant) {
         bin[arrNum].push(closeP);
         movePeople(n, points[arrNum], closeP, instant);
 
-        //console.log(arrNum);
+        ////console.log(arrNum);
     }
     oldArr = arr;
     oldNum = num;
@@ -369,7 +369,7 @@ function travel(newx, newy, oldx, oldy, speed) {
     if (traveltime > longestTime) {
         longestTime = traveltime;
     }
-    //console.log("long:" + longestTime);
+    ////console.log("long:" + longestTime);
     if (traveltime < 1 && speed !== Infinity) {
         traveltime += 1;
     }
@@ -381,18 +381,18 @@ function gridsetup(num, bias, rule, runaway) {
     let gridArr = [];
     var i;
     bias = num * 1.5;
-    console.log(bias);
+    //console.log(bias);
     for (i = 0; i < num; i++) {
         gridArr[i] = randomPointOf(i, bias, rule);
         if (runaway == true) {
-            console.log("runaway");
+            //console.log("runaway");
             gridArr[i][1] = parseFloat(gridArr[i][1]) + 3 * (containerHeight / 4);
         } else {
         }
         gridArr[i][1] = gridArr[i][1] - 0;
         gridArr[i][0] = gridArr[i][0] - 0;
     }
-    //console.log(gridArr)
+    ////console.log(gridArr)
 
     return gridArr;
 }

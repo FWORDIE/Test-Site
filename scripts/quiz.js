@@ -46,7 +46,7 @@ function builder(HTML) {
         if (AnswerArea != "") {
             AnsButs = document.getElementsByClassName("quizbutton");
             for (let i = 0; i < AnsButs.length; i++) {
-                //console.log(AnsButs[i]);
+                ////console.log(AnsButs[i]);
                 AnsButs[i].addEventListener("mouseenter", (e) => {
                     if (i <= 1) {
                         topAns = document.getElementById("TopAns1");
@@ -177,7 +177,7 @@ function setUpQuestion() {
         }
         SectionQuesNum.innerHTML = AllQuestions[Qnumber][0];
         QuesTextText.innerText = AllQuestions[Qnumber][1];
-        console.log(AllQuestions[Qnumber][1]);
+        //console.log(AllQuestions[Qnumber][1]);
         TopAns1.innerHTML = AllQuestions[Qnumber][2];
         TopAns2.innerHTML = AllQuestions[Qnumber][3];
     }, (longestTime / 2) * 1000);
@@ -185,7 +185,7 @@ function setUpQuestion() {
 }
 
 function Answer4(ans) {
-    console.log("record", ans);
+    //console.log("record", ans);
     UpdateDataBase((Qnumber+3), ans);
     // Do things to show results
     ///NextQButton.classList.remove('hidden');
@@ -202,7 +202,7 @@ function Answer4(ans) {
     }
     recordAnswer(ans);
     answer(ans);
-    console.log(longestTime);
+    //console.log(longestTime);
     setTimeout(function () {
         NextQButton.classList.remove("hidden");
     }, longestTime * 1000);
@@ -305,11 +305,11 @@ function openButAnswer() {
                 for (let j = 0; j < FindDots.length; j++) {
                     FindDots[j].classList.remove("pinkdot");
                 }
-                console.log(FindDots[i]);
+                //console.log(FindDots[i]);
                 FindDots[i].classList.add("pinkdot");
                 let TotAns = OpenAnswers[OpenQnumber].length;
                 let AnswerNum = Math.floor(Math.random() * TotAns) + 0;
-                console.log(TotAns);
+                //console.log(TotAns);
                 if (TotAns == 0) {
                     document.getElementById("OtherAns").innerText = "No more responses left";
                     for (let j = 0; j < FindDots.length; j++) {
@@ -445,7 +445,7 @@ function limitText(limitField, limitNum, num) {
 
 //Button hover States
 for (let i = 0; i < AnsButs.length; i++) {
-    console.log(AnsButs[i]);
+    //console.log(AnsButs[i]);
     AnsButs[i].addEventListener("mouseenter", (e) => {
         if (i <= 1) {
             topAns = document.getElementById("TopAns1");
